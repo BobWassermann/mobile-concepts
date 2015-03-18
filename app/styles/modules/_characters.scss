@@ -1,0 +1,22 @@
+$char--size: 50px;
+
+@mixin char-url($char) {
+  background: center/contain url(/images/characters/#{$char}.png) no-repeat;
+}
+
+.char {
+  @include size($char--size);
+  position: absolute;
+}
+
+.char.vogel {
+  @include char-url(vogel);
+  top: 25%;
+  right: 20%;
+}
+
+.char.worm {
+  @include char-url(worm);
+  top: 60%;
+  left: 5%;
+}

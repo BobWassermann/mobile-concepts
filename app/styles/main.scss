@@ -1,6 +1,6 @@
 @import 'bourbon/bourbon';
 @import 'base/variables', 'base/typography';
-@import 'modules/add-to-homescreen', 'modules/popup', 'modules/main-menu';
+@import 'modules/add-to-homescreen', 'modules/popup', 'modules/main-menu', 'modules/characters';
 
 * {
   @include box-sizing(border-box);
