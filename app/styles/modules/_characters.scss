@@ -1,4 +1,4 @@
-$char--size: 15vw;
+$char--size: 10vw;
 
 @mixin char-url($char) {
   background: center/contain url(/images/characters/#{$char}.png) no-repeat;
@@ -13,13 +13,39 @@ $char--size: 15vw;
   @include char-url(vogel);
   top: 25%;
   right: 20%;
+  @include size($char--size*2);
 }
 
 .char.worm {
   @include char-url(worm);
   top: 60%;
   left: 5%;
+  @include size($char--size*1.5);
   &:after {
     content: '';
+    @include char-url(kleine-steen);
+    @include size(7vw);
+    position: absolute;
+    @include transform(translateX(80%) translateY(140%));
   }
+}
+
+.char.boom {
+  @include char-url(boom);
+  top: 7%;
+  left: 18%;
+  &:after {
+    content: '';
+    @include char-url(boom-bos);
+    @include size(35vw);
+    background-position-x: left;
+    position: fixed;
+    left: 0; top: 6%;
+  }
+}
+
+.char.bever {
+  @include char-url(bever);
+  top: 2%;
+  right: 1%;
 }
