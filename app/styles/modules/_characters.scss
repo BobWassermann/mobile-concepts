@@ -1,4 +1,4 @@
-$char--size: 50px;
+$char--size: 15vw;
 
 @mixin char-url($char) {
   background: center/contain url(/images/characters/#{$char}.png) no-repeat;
@@ -19,4 +19,7 @@ $char--size: 50px;
   @include char-url(worm);
   top: 60%;
   left: 5%;
+  &:after {
+    content: '';
+  }
 }
