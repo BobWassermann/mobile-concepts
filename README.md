@@ -10,3 +10,16 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+# Markup
+
+## Add to homescreen
+
+```
+<section id="add-to-homescreen">
+  <h1>We zijn bijna zover</h1>
+  <div class="popup">
+    Tap ↥ en daarna “Voeg toe aan beginscherm”
+  </div>
+</section>
+```
