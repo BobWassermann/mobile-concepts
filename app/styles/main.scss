@@ -1,7 +1,14 @@
 @import 'bourbon/bourbon';
 @import 'base/variables', 'base/typography';
-@import 'modules/add-to-homescreen', 'modules/popup';
+@import 'modules/add-to-homescreen', 'modules/popup', 'modules/main-menu';
 
 * {
   @include box-sizing(border-box);
+}
+
+.view {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0; top: 0;
 }
