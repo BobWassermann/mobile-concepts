@@ -1,0 +1,33 @@
+// Font includes
+@include font-face("comic-neue", "fonts/ComicNeue-Angular-Bold", bold, $file-formats: ttf);
+
+// Variables
+$font--base: comic-neue, sans-serif;
+$font--h1--size: 3rem;
+
+// Code
+body {
+  font-family: $font--base;
+  font-weight: bold;
+  font-size: 62.5%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding: $padding--g;
+}
+
+h1 {
+  text-align: center;
+  font-size: $font--h1--size;
+}

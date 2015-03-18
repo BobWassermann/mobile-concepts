@@ -1,0 +1,12 @@
+section#add-to-homescreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  background: #14A1FF center/cover url('../images/achtergrond_tak.png') no-repeat;
+
+  .popup {
+    bottom: $margin--g*6;
+  }
+
+}
