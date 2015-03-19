@@ -1,6 +1,6 @@
 @import 'bourbon/bourbon';
 @import 'base/variables', 'base/typography';
-@import 'modules/add-to-homescreen', 'modules/popup', 'modules/main-menu', 'modules/characters';
+@import 'modules/add-to-homescreen', 'modules/popup', 'modules/main-menu', 'modules/characters', 'modules/quest-bever';
 
 * {
   @include box-sizing(border-box);

@@ -1,0 +1,10 @@
+$quest-bever--bever-size: $char--size*3.5;
+
+section#bever { 
+	background: center/cover url('/images/achtergrond-bever.png') no-repeat;
+	.char.bever {
+		top: calc(100% - #{$quest-bever--bever-size * 0.8});
+		right: inherit;
+		@include size($quest-bever--bever-size);
+	}
+}

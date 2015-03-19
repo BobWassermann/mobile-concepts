@@ -1,3 +1,16 @@
 section#main-menu {
   background: center/cover url('/images/achtergrond-menu.jpg') no-repeat;
 }
+
+$nav--size: 10vw;
+
+@mixin nav-url($nav) {
+  background: center/contain url(/images/#{$nav}.png) no-repeat;
+}
+
+.nav.home {
+  @include nav-url(home-button);
+  top: 2%;
+  right: 2%;
+  @include size($nav--size*1);
+}
