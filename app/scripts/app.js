@@ -32,6 +32,10 @@ angular
         templateUrl: 'views/quest-bever.html',
         controller: 'QuestBeverCtrl'
       })
+      .when('/quest-worm', {
+        templateUrl: 'views/quest-worm.html',
+        controller: 'QuestWormCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
