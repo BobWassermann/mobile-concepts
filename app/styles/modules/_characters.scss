@@ -30,13 +30,13 @@ $char--size: 10vw;
   }
 }
 
-.char.boom {
-  @include char-url(boom);
+.char.tak {
+  @include char-url(tak);
   top: 7%;
   left: 18%;
   &:after {
     content: '';
-    @include char-url(boom-bos);
+    @include char-url(tak-bos);
     @include size(35vw);
     background-position-x: left;
     position: fixed;
