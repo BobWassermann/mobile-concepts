@@ -1,29 +1,29 @@
 $char--size: 10vw;
+$characters: vogel worm bever tak bloem;
 
-@mixin char-url($char) {
-  background: center/contain url(/images/characters/#{$char}.png) no-repeat;
-}
-
-.char {
-  @include size($char--size);
-  position: absolute;
+@each $animal in $characters {
+  .char.#{$animal} {
+    background: center/contain url(/images/characters/#{$animal}.png) no-repeat;
+    @include size($char--size);
+    position: absolute;
+    z-index: 20;
+  }
 }
 
 .char.vogel {
-  @include char-url(vogel);
   top: 25%;
   right: 20%;
   @include size($char--size*2);
+  @include fadeInRightBig();
 }
 
 .char.worm {
-  @include char-url(worm);
   top: 60%;
   left: 5%;
   @include size($char--size*1.5);
   &:after {
     content: '';
-    @include char-url(kleine-steen);
+    background: center/contain url(/images/characters/kleine-steen.png) no-repeat;
     @include size(7vw);
     position: absolute;
     @include transform(translateX(80%) translateY(140%));
@@ -31,12 +31,11 @@ $char--size: 10vw;
 }
 
 .char.boom {
-  @include char-url(boom);
   top: 7%;
   left: 18%;
   &:after {
     content: '';
-    @include char-url(boom-bos);
+//     @include char-url(boom-bos);
     @include size(35vw);
     background-position-x: left;
     position: fixed;
@@ -45,7 +44,6 @@ $char--size: 10vw;
 }
 
 .char.bever {
-  @include char-url(bever);
   top: 2%;
   right: 1%;
 }
