@@ -1,0 +1,13 @@
+$quest-worm--worm-size: $char--size*3.5;
+
+section#worm { 
+	background: center/cover url('/images/achtergrond-worm.png') no-repeat;
+	.char.worm {
+		top: calc(100% - #{$quest-worm--worm-size * 0.9});
+		left: 5%;
+		@include size($quest-worm--worm-size);
+	}
+	.char.worm:after {
+		display: none;
+	}
+}

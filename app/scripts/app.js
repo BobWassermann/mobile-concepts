@@ -28,6 +28,18 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/quest-bever', {
+        templateUrl: 'views/quest-bever.html',
+        controller: 'QuestBeverCtrl'
+      })
+      .when('/quest-worm', {
+        templateUrl: 'views/quest-worm.html',
+        controller: 'QuestWormCtrl'
+      })
+      .when('/quest-tak', {
+        templateUrl: 'views/quest-tak.html',
+        controller: 'QuestTakCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
