@@ -1,9 +1,17 @@
 @import 'bourbon/bourbon';
 @import 'base/variables', 'base/typography';
-@import 'modules/add-to-homescreen', 'modules/popup', 'modules/main-menu', 'modules/characters', 'modules/quest-bever', 'modules/quest-worm', 'modules/quest-tak';
 
+@import 'modules/add-to-homescreen', 'modules/popup', 'modules/main-menu', 'modules/characters', 'modules/quest-bever', 'modules/quest-worm', 'modules/quest-tak', 'modules/wolken';
 * {
   @include box-sizing(border-box);
+}
+
+body {
+  position: relative;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  overflow: hidden;
+  @include linear-gradient(#71D3E6, #C0F5FF, $fallback: #71D3E6);
 }
 
 .view {
