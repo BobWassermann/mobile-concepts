@@ -1,0 +1,47 @@
+$wolkSmall: 15vw;
+$wolkBig: 30vw;
+$wolkCount: 6;
+
+@include keyframes(wolkSmall) {
+  from {
+    @include transform(translateX(100+$wolkSmall));
+  }
+  to {
+   @include transform(translateX(-$wolkSmall)); 
+  }
+}
+
+@include keyframes(wolkBig) {
+  from {
+    @include transform(translateX(100+$wolkBig));
+  }
+  to {
+   @include transform(translateX(-$wolkBig)); 
+  }
+}
+
+@mixin wolk {
+ 
+  @for $i from 1 through $wolkCount {
+  
+    .wolk:nth-child(#{$i}) {
+      background: center/contain url(/images/wolk.svg) no-repeat;
+      position: absolute;
+      top: calc(1vh * random(6));
+      @include size($wolkSmall);
+      @include animation(wolkSmall random(60)+20s infinite linear backwards);
+      @include animation-delay(#{$i*2}s);
+      
+      @if $i >= ceil($wolkCount) {
+        @include size($wolkBig);
+        @include animation(wolkBig random(80)+40s infinite linear backwards);
+      }
+
+    }
+
+  }
+}
+
+#wolken {
+  @include wolk;
+}
