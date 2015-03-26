@@ -1,6 +1,18 @@
 $char--size: 10vw;
 $characters: vogel worm bever tak bloem;
 
+@include keyframes(bloem) {
+  0% {
+    @include transform(rotate(5deg));
+  }
+  50% {
+    @include transform(rotate(-5deg));
+  }
+  100% {
+    @include transform(rotate(5deg));
+  }
+}
+
 @each $animal in $characters {
   .char.#{$animal} {
     background: center/contain url(/images/characters/#{$animal}.png) no-repeat;
@@ -20,6 +32,13 @@ $characters: vogel worm bever tak bloem;
   top: 65%;
   right: 1%;
   @include size($char--size*2);
+  &:before {
+    content: '';
+    background: center/contain url(/images/characters/bloem-hoofd.png) no-repeat;
+    @include size($char--size*2);
+    position: absolute;
+    @include animation(bloem 3s ease-in-out infinite);
+  }
 }
 
 .char.worm {
