@@ -8,3 +8,7 @@ section#bever {
 		@include size($quest-bever--bever-size);
 	}
 }
+
+section#bever .tekstballon {
+	@include tekstballon(left);
+}
