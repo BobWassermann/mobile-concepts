@@ -27,7 +27,7 @@ $wolkCount: 6;
     .wolk:nth-child(#{$i}) {
       background: center/contain url(/images/wolk.svg) no-repeat;
       position: absolute;
-      top: calc(1vh * random(6));
+      top: calc(1vh * #{random(6)});
       @include size($wolkSmall);
       @include animation(wolkSmall random(60)+20s infinite linear backwards);
       @include animation-delay(#{$i*2}s);
