@@ -1,0 +1,14 @@
+$quest-bloem--bloem-size: $char--size*3.5;
+
+section#bloem { 
+	background: center/cover url('/images/achtergrond-bloem.png') no-repeat;
+	.char.bloem {
+		top: calc(100% - #{$quest-bloem--bloem-size * 0.8});
+		right: inherit;
+		@include size($quest-bloem--bloem-size);
+	}
+}
+
+section#bloem .tekstballon {
+	@include tekstballon(left);
+}
