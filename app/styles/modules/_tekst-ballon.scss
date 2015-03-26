@@ -1,15 +1,28 @@
 $tekstballon--caret-size:40px;
 
+@include keyframes(tekstballon) {
+	0% {
+		@include transform(scale(0.98));
+	}
+	50% {
+		@include transform(scale(1.01));
+	}
+	100% {
+		@include transform(scale(1));
+	}
+}
+
 @mixin tekstballon($position) {
 	background: #fff;
 	color: #000;
 	border: 3px solid #000;
-	border-radius: 100px 100px 100px 100px;	
+	border-radius: 100px;	
 	padding: 2em;
 	position: absolute;
 	font-size: 2rem;
 	z-index: 100;
 	min-height: 8em;
+	@include animation(tekstballon 1s ease-in-out);
 	@include box-sizing(border-box);
 	@if $position == left {
 		left: 20%;
@@ -26,7 +39,7 @@ $tekstballon--caret-size:40px;
 		bottom: 0;
 		left: -$tekstballon--caret-size * 1.4;
 		width: 0; 
-		height: 0; 
+		height: 0;
 		border-left: $tekstballon--caret-size solid transparent;
 		border-right: $tekstballon--caret-size solid transparent;		
 		border-top: $tekstballon--caret-size solid #fff;

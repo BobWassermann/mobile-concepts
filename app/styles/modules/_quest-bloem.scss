@@ -6,9 +6,13 @@ section#bloem {
 		top: calc(100% - #{$quest-bloem--bloem-size * 0.8});
 		right: inherit;
 		@include size($quest-bloem--bloem-size);
+    &:before {
+      @include size($quest-bloem--bloem-size);
+    }
 	}
 }
 
 section#bloem .tekstballon {
 	@include tekstballon(left);
+  left: $quest-bloem--bloem-size * 0.8;
 }
