@@ -14,7 +14,6 @@ $characters: vogel worm bever tak bloem;
   top: 25%;
   right: 20%;
   @include size($char--size*2);
-  @include fadeInRightBig();
 }
 
 .char.worm {
