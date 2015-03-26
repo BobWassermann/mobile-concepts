@@ -40,6 +40,10 @@ angular
         templateUrl: 'views/quest-tak.html',
         controller: 'QuestTakCtrl'
       })
+      .when('/quest-bloem', {
+        templateUrl: 'views/quest-bloem.html',
+        controller: 'QuestBloemCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
