@@ -1,7 +1,7 @@
-@import 'lib/bourbon/bourbon', 'lib/animate/animate';
+@import 'bourbon/bourbon';
 @import 'base/variables', 'base/typography';
-
 @import 'modules/add-to-homescreen', 'modules/popup', 'modules/main-menu', 'modules/characters', 'modules/quest-bever', 'modules/quest-worm', 'modules/quest-tak', 'modules/wolken';
+
 * {
   @include box-sizing(border-box);
 }
