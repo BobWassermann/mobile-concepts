@@ -53,3 +53,17 @@ section#main-menu .grass {
   //   @include animation(foreground $main-menu--third-anim ease-in forwards);
   // }
 }
+
+$nav--size: 10vw;
+
+@mixin nav-url($nav) {
+  background: center/contain url(/images/#{$nav}.png) no-repeat;
+}
+
+.nav.home {
+  @include nav-url(home-button);
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  @include size($nav--size*1);
+}
