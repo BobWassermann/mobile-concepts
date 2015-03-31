@@ -10,9 +10,9 @@
 angular.module('mobileConceptsApp')
   .controller('QuestBeverCtrl', function ($scope) {
     $scope.messages = [
-      'Hoi, ik ben Bob de Bolle Bever. Ik speelde verstoppertje met mijn vriendjes, maar ze zijn er vandoor. Kunnen jullie mij helpen mijn vriendjes terug te vinden?',
-      'AngularJS',
-      'Karma'
+      'Hoi, ik ben Bob de Bolle Bever.',
+      'Ik speelde verstoppertje met mijn vriendjes, maar ze zijn er vandoor.',
+      'Kunnen jullie mij helpen mijn vriendjes terug te vinden?'
     ];
   }).directive('tekstBallon', function(){
       return {
@@ -27,6 +27,8 @@ angular.module('mobileConceptsApp')
           $scope.getTemplateUrl = function() {
             if($scope.clicked <= ($scope.messages.length - 1)) {
               return '/templates/bever-tekstballon.tpl.html';
+            } else {
+              return '/templates/bever-keuze.tpl.html';
             }
           };
         }
