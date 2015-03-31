@@ -23,6 +23,8 @@ $tekstballon--caret-size:40px;
 	z-index: 100;
 	min-height: 8em;
 	width: 70%;
+	cursor: pointer;
+	@include user-select(none);
 	@include animation(tekstballon 1s ease-in-out);
 	@include box-sizing(border-box);
 	@if $position == left {
