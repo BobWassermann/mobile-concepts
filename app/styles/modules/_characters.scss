@@ -8,8 +8,8 @@ $characters: vogel worm bever tak bloem;
 }
 
 @include keyframes(charCaret) {
-  0%, 100% { @include transform(translateY(-50%)) }
-  50% { @include transform(translateY(0%)) }
+  0%, 100%  { @include transform(translateY(-50%) translateX(-50%)) }
+  50%       { @include transform(translateY(0%)   translateX(-50%)) }
 }
 
 @each $animal in $characters {
@@ -18,13 +18,13 @@ $characters: vogel worm bever tak bloem;
     @include size($char--size);
     position: absolute;
     z-index: 20;
-    &:after {
+    #main-menu &:after {
       z-index: 10;
       content: '';
       position: absolute;
       top: -$char--caret-size * 1.5;
       left: 50%;
-      margin-left: -$char--caret-size;
+      @include transform(translateX(-50%));
       @include animation(charCaret 2s ease-in-out infinite);
       width: 0; 
       height: 0;
