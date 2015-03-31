@@ -1,9 +1,6 @@
 <div class="keuze animated rubberBand">
   <h3>Welke vriendjes wil je zoeken?</h3>
-  <ul>
-    <li>Waterdiertjes</li><!-- In water, obviously -->
-    <li>Holbewoners</li><!-- Onder de stenen -->
-    <li>Geschorste schoften</li><!-- In boomstronken -->
-    <!-- <li>Poep-vriendjes</li> -->
+  <ul ng-repeat="i in opdrachten">
+    <li>{{i}}</li>
   </ul>
 </div>

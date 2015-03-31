@@ -14,6 +14,11 @@ angular.module('mobileConceptsApp')
       'Ik speelde verstoppertje met mijn vriendjes, maar ze zijn er vandoor.',
       'Kunnen jullie mij helpen mijn vriendjes terug te vinden?'
     ];
+    $scope.opdrachten = [
+      'Waterdiertjes',
+      'Holbewoners',
+      'Geschorste schoften'
+    ];
   }).directive('tekstBallon', function(){
       return {
         restrict: 'A',
