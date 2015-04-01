@@ -1,6 +1,6 @@
 <div class="keuze animated rubberBand">
   <h3>Welke vriendjes wil je zoeken?</h3>
-  <ul ng-repeat="i in opdrachten">
-    <li>{{i}}</li>
+  <ul>
+    <li ng-repeat="i in opdrachten" ng-click="loadOpdracht({{$index + 1}})">{{i}}</li>
   </ul>
 </div>

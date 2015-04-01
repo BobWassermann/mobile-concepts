@@ -29,6 +29,10 @@ angular.module('mobileConceptsApp')
           $scope.click = function(){
             $scope.clicked++;
           };
+          $scope.loadOpdracht = function($index){
+            return $index;
+            // return '/templates/bever-opdracht-' + $index + '.tpl.html';
+          };
           $scope.getTemplateUrl = function() {
             if($scope.clicked <= ($scope.messages.length - 1)) {
               return '/templates/bever-tekstballon.tpl.html';

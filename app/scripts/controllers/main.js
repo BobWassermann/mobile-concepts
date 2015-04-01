@@ -9,12 +9,12 @@
  */
 angular.module('mobileConceptsApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  }).filter('removeSpacesThenLowercase', function () {
+      return function (text) {
+      var str = text.replace(/\s+/g, '');
+      return str.toLowerCase();
+    };
+});
 
   document.addEventListener('touchmove', function(e) {
     e.preventDefault();
