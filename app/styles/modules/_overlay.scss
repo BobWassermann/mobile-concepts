@@ -1,0 +1,60 @@
+$overlay--width: 30%;
+$loep--size: 40px;
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  position: relative;
+  background: rgb(192, 192, 192);
+  background: rgba(192, 192, 192, .5);
+}
+
+$checkbox--width: 50%;
+
+.checkbox {
+  background: $orange;
+  color: #fff;
+  border-radius: 50px;
+  width: $checkbox--width;
+  position: absolute;
+  top: 5%;
+  left: calc((100% - #{$checkbox--width})/2);
+  @include box-sizing(border-box);
+  padding: 2rem;
+  font-size: 1rem;
+  h3 {
+    font-size: 2rem;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  > * {
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    margin: 0; padding: 0;
+    li {
+      margin: 1em 0;
+      padding: 1em;
+      background: #fff;
+      color: $orange;
+      border-radius: $border-radius--g;
+      cursor: pointer;
+      @include user-select(none);
+    }
+  }
+}
+
+.loep {
+    background: center/cover url('/images/loep.png') no-repeat;
+    width: $loep--size;
+    height: $loep--size;
+    position: absolute;
+    right: 7.5em;
+    bottom: 1.8em;
+
+}
