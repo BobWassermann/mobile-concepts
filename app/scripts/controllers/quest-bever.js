@@ -24,6 +24,21 @@ angular.module('mobileConceptsApp')
           'Vang ze voorzichtig en bekijk ze heel goed!',
           'Gebruik voor deze opdracht jullie loep.'
         ]
+      ],
+      ['degrotespeurtocht',
+        [
+          'In de natuur laten de meeste dieren zich niet zo gemakkelijk zien.',
+          'We kunnen er wel achter komen waar het diertje zich verstopt heeft.',
+          'Ben jij een echte detective?',
+          'Volg de sporen.'
+        ]
+      ],
+      ['spullenverzamelen',
+        [
+          'Ik wil een huisje bouwen maar dat is veel werk en ik heb er vanalles voor nodig.',
+          'Willen jullie mij helpen met het verzamelen van deze spullen?',
+          'Je hebt wel een loep nodig!'
+        ]
       ]
     ];
     $scope.opdrachten = [
