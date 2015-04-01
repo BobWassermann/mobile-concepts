@@ -48,26 +48,25 @@ angular
         templateUrl: '/views/quest-bever.html'
       })
 
-        .state('bever.keuzes', {
-          url: '/keuzes',
-          template: '<h1>hoi</h1>'
-          // templateUrl: '/templates/bever-keuze.tpl.html'
-        })
+      .state('bever-keuzes', {
+        url: '/bever/keuzes',
+        templateUrl: '/templates/bever-keuze.tpl.html'
+      })
 
-        .state('bever.waterdiertjes', {
-          url: '/waterdiertjes',
-          templateUrl: '/templates/bever-waterdiertjes.tpl.html'
-        })
+      .state('bever-opdracht-waterdiertjes', {
+        url: '/bever/waterdiertjes',
+        templateUrl: '/templates/bever-waterdiertjes.tpl.html'
+      })
 
-        .state('bever.holbewoners', {
-          url: '/holbewoners',
-          templateUrl: '/templates/bever-holbewoners.tpl.html'
-        })
+      .state('bever-opdracht-holbewoners', {
+        url: '/bever/holbewoners',
+        templateUrl: '/templates/bever-holbewoners.tpl.html'
+      })
 
-        .state('bever.geschorsteschoften', {
-          url: '/geschorsteschoften',
-          templateUrl: '/templates/bever-geschorsteschoften.tpl.html'
-        })
+      .state('bever-opdracht-geschorsteschoften', {
+        url: '/bever/geschorsteschoften',
+        templateUrl: '/templates/bever-geschorsteschoften.tpl.html'
+      })
 
       .state('bloem', {
         url: '/bloem',

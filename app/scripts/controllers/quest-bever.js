@@ -27,8 +27,7 @@ angular.module('mobileConceptsApp')
       if($scope.clicked <= len) {
         $scope.clicked++;
       } else {
-        console.log('stop');
-        $state.go('bever.keuzes');
+        $state.go('bever-keuzes');
       }
 
     };
