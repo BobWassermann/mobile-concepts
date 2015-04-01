@@ -14,10 +14,10 @@ $characters: vogel worm bever tak bloem;
 
 @include keyframes(vogel) {
   from {
-    @include transform(translate(110vh, -30vh));
+    @include transform(translateY(50vh));
   }
   to {
-    @include transform(translate(40vh, 0vh));
+    @include transform(translateY(-17vh));
   }
 }
 
