@@ -19,4 +19,8 @@ angular.module('mobileConceptsApp')
       'Holbewoners',
       'Geschorste schoften'
     ];
+    $scope.clicked = 0;
+    $scope.click = function(){
+      $scope.clicked++;
+    };
 });

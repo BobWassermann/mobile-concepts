@@ -2,7 +2,8 @@
 	<a ui-sref="home"><div class="nav home"></div></a>
   <div class="char bever"></div>
 
-  <div ui-view></div>
-  <!-- <div tekst-ballon></div> -->
+  <div class="tekstballon bever" ng-click="click()">
+    {{messages[clicked]}}
+  </div>
 
 </section>
