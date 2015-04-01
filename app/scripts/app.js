@@ -48,6 +48,12 @@ angular
         templateUrl: '/views/quest-bever.html'
       })
 
+        .state('bever.keuzes', {
+          url: '/keuzes',
+          template: '<h1>hoi</h1>'
+          // templateUrl: '/templates/bever-keuze.tpl.html'
+        })
+
         .state('bever.waterdiertjes', {
           url: '/waterdiertjes',
           templateUrl: '/templates/bever-waterdiertjes.tpl.html'
