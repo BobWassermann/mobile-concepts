@@ -1,18 +1,31 @@
-$keuze--width: 50%;
+$keuze--width: 60%;
+
+.keuze-wrap {
+  @extend %ohLordCenterMyChildren;
+  @include user-select(none);
+  .char.bever {
+    left: 0;
+  }
+}
 
 .keuze {
   background: $orange;
   color: #fff;
   border-radius: 50px;
   width: $keuze--width;
-  position: absolute;
-  bottom: 22%;
   left: calc((100% - #{$keuze--width})/2);
   @include box-sizing(border-box);
   padding: 2rem;
   font-size: 1rem;
+  @include mobile {
+    width: 80%;
+    padding: 1.5rem;
+  }
   h3 {
     font-size: 2rem;
+    @include mobile {
+      font-size: 1.3rem;
+    }
   }
   > * {
     text-align: center;
@@ -28,6 +41,9 @@ $keuze--width: 50%;
       border-radius: $border-radius--g;
       cursor: pointer;
       @include user-select(none);
+      @include mobile {
+        padding: 0.5em 0;
+      }
     }
   }
 }

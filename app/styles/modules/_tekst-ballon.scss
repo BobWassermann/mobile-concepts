@@ -1,4 +1,4 @@
-$tekstballon--caret-size:40px;
+$tekstballon--caret-size: 30px;
 
 @include keyframes(tekstballon) {
 	0% {
@@ -19,21 +19,16 @@ $tekstballon--caret-size:40px;
 	border-radius: 100px;	
 	padding: 2em;
 	text-align: center;
-	position: absolute;
+	position: fixed;
 	font-size: 1.2rem;
 	z-index: 100;
-	min-height: $tekstballon--caret-size*4;
+	min-height: $tekstballon--caret-size*2;
 	width: 70%;
 	cursor: pointer;
-	@include display(flex);
-	@include align-items(center);
-	@include justify-content(center);
+	@extend %ohLordCenterMyChildren;
 	@include user-select(none);
 	@include animation(tekstballon 1s ease-in-out);
 	@include box-sizing(border-box);
-	@if $position == left {
-		left: 20%;
-	}
 	&:before, &:after {
 		@include transform(rotate(90deg));
 		@if $position == left {
@@ -44,7 +39,7 @@ $tekstballon--caret-size:40px;
 		content: '';
 		position: absolute;
 		bottom: 0;
-		left: -$tekstballon--caret-size * 1.2;
+		left: -$tekstballon--caret-size * 1.1;
 		width: 0; 
 		height: 0;
 		border-left: $tekstballon--caret-size solid transparent;
@@ -55,7 +50,7 @@ $tekstballon--caret-size:40px;
 		border-left: $tekstballon--caret-size solid transparent;
 		border-right: $tekstballon--caret-size solid transparent;
 		border-top: $tekstballon--caret-size solid #000;
-		left: -$tekstballon--caret-size * 1.3;
+		left: -$tekstballon--caret-size * 1.25;
 		z-index: 5;
 	}
 }
