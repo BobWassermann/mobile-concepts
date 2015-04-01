@@ -1,12 +1,11 @@
 $main-menu--anim: 1s;
-//$main-menu--third-anim: 1s;
 
 @include keyframes(background1) {
   from {
     @include transform(translateY(30vh));
   }
   to {
-    @include transform(translateY(-20vh));
+    @include transform(translateY(-17vh));
   }
 }
 
@@ -15,7 +14,7 @@ $main-menu--anim: 1s;
     @include transform(translateY(50vh));
   }
   to {
-    @include transform(translateY(-20vh));
+    @include transform(translateY(-50vh));
   }
 }
 
@@ -24,14 +23,14 @@ $main-menu--anim: 1s;
     @include transform(translateY(60vh));
   }
   to {
-    @include transform(translateY(-45vh));
+    @include transform(translateY(-40vh));
   }
 }
 
 section#main-menu #grass {
   position: relative;
   height: 50vh;
-  @include transform(translateY(50vh));
+  top: 50vh;
 }
 
 section#main-menu .grass {
@@ -42,16 +41,16 @@ section#main-menu .grass {
   }
   &.background1 {
     z-index: 10;
-    @include animation(background1 $main-menu--anim ease-in forwards);
+    @include animation(background1 $main-menu--anim ease-out forwards);
   }
   &.background2 {
     z-index: 9;
-    @include animation(background2 $main-menu--anim*1.3 ease-in forwards);
+    @include animation(background2 $main-menu--anim*1.3 ease-out forwards);
   }
   &.background3 {
     z-index: 8;
     position: relative;
-    @include animation(background3 $main-menu--anim*1.6 ease-in forwards);
+    @include animation(background3 $main-menu--anim*1.6 ease-out forwards);
   }
 }
 
