@@ -24,20 +24,19 @@ angular.module('mobileConceptsApp')
         restrict: 'A',
         scope: true,
         template: '<ng-include src="getTemplateUrl()" />',
-        controller: function($scope) {
+        controller: function($scope, $transclude) {
           $scope.clicked = 0;
           $scope.click = function(){
             $scope.clicked++;
           };
-          $scope.loadOpdracht = function($index){
-            return $index;
-            // return '/templates/bever-opdracht-' + $index + '.tpl.html';
+          $scope.loadOpdracht = function(element) {
+            return '/partials/bever-opdracht-' + element + '.tpl.html';
           };
           $scope.getTemplateUrl = function() {
             if($scope.clicked <= ($scope.messages.length - 1)) {
-              return '/templates/bever-tekstballon.tpl.html';
+              return '/partials/bever-tekstballon.tpl.html';
             } else {
-              return '/templates/bever-keuze.tpl.html';
+              return '/partials/bever-keuze.tpl.html';
             }
           };
         }

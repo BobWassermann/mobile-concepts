@@ -16,35 +16,42 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+  .config(function ($stateProvider, $urlRouterProvider) {
+    
+    $urlRouterProvider.otherwise('/'); // if all fails
+    
+    $stateProvider
+
+      .state('home', {
+        url: '/',
+        templateUrl: 'views/main.html'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .when('/quest-bever', {
-        templateUrl: 'views/quest-bever.html',
-        controller: 'QuestBeverCtrl'
-      })
-      .when('/quest-worm', {
+
+      .state('worm', {
+        url: '/worm',
         templateUrl: 'views/quest-worm.html',
         controller: 'QuestWormCtrl'
       })
-      .when('/quest-tak', {
+
+      .state('tak', {
+        url: '/tak',
         templateUrl: 'views/quest-tak.html',
         controller: 'QuestTakCtrl'
       })
-      .when('/quest-bloem', {
+
+      .state('bever', {
+        url: '/bever',
+        templateUrl: 'views/quest-bever.html',
+        controller: 'QuestBeverCtrl'
+      })
+
+      .state('bloem', {
+        url: '/bloem',
         templateUrl: 'views/quest-bloem.html',
         controller: 'QuestBloemCtrl'
       })
-      .otherwise({
-        redirectTo: '/'
-      });
+
   });
