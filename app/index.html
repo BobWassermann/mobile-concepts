@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" manifest="app.appcache">
   <head>
     <meta charset="utf-8">
     <title>CNME</title>
@@ -36,7 +36,7 @@
     </div>
 
     <div class="container">
-    <a ui-sref="home"><div class="nav home"></div></a>
+    <a ui-sref="home" ng-show="$state.is != " class="ng-hide"><div class="nav home"></div></a>
       <div ui-view=""></div>
     </div>
 
