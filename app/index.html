@@ -36,7 +36,7 @@
     </div>
 
     <div class="container">
-    <a ui-sref="home"><div class="nav home"></div></a>
+    <a ui-sref="home" ng-hide="$state.is('home')" class="ng-hide"><div class="nav home"></div></a>
       <div ui-view=""></div>
     </div>
 
