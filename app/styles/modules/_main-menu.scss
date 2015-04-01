@@ -23,7 +23,7 @@ $main-menu--anim: 1s;
     @include transform(translateY(60vh));
   }
   to {
-    @include transform(translateY(-40vh));
+    @include transform(translateY(-35vh));
   }
 }
 
@@ -46,6 +46,7 @@ section#main-menu .grass {
   &.background2 {
     z-index: 9;
     @include animation(background2 $main-menu--anim*1.3 ease-out forwards);
+    width: 50%;
   }
   &.background3 {
     z-index: 8;

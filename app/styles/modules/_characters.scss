@@ -1,5 +1,5 @@
 $char--size: 10vw;
-$char--caret-size: 4vw;
+$char--caret-size: 2vw;
 $characters: vogel worm bever tak bloem;
 
 @include keyframes(bloem) {
@@ -64,10 +64,11 @@ $characters: vogel worm bever tak bloem;
 }
 
 .char.worm {
-  top: 90%;
+  top: 94%;
   left: 7%;
   z-index: 11;
   @include size($char--size*1.5);
+  background-position-y: top;
   #main-menu &  {
     @include animation(background1 $main-menu--anim ease-out forwards);
   }
@@ -97,7 +98,7 @@ $characters: vogel worm bever tak bloem;
 }
 
 .char.bever {
-  top: 48%;
+  top: 50%;
   right: 2%;
   @include size($char--size*0.9);
   #main-menu & {
