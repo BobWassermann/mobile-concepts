@@ -19,26 +19,4 @@ angular.module('mobileConceptsApp')
       'Holbewoners',
       'Geschorste schoften'
     ];
-  }).directive('tekstBallon', function(){
-      return {
-        restrict: 'A',
-        scope: true,
-        template: '<ng-include src="getTemplateUrl()" />',
-        controller: function($scope, $transclude) {
-          $scope.clicked = 0;
-          $scope.click = function(){
-            $scope.clicked++;
-          };
-          $scope.loadOpdracht = function(element) {
-            return '/partials/bever-opdracht-' + element + '.tpl.html';
-          };
-          $scope.getTemplateUrl = function() {
-            if($scope.clicked <= ($scope.messages.length - 1)) {
-              return '/partials/bever-tekstballon.tpl.html';
-            } else {
-              return '/partials/bever-keuze.tpl.html';
-            }
-          };
-        }
-      };
 });

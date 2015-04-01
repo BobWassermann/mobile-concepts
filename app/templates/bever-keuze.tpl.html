@@ -1,0 +1,6 @@
+<div class="keuze animated rubberBand">
+  <h3>Welke vriendjes wil je zoeken?</h3>
+  <ul>
+    <li ng-repeat="i in opdrachten" ui-sref="bever.{{i | removeSpacesThenLowercase}}">{{i}}</li>
+  </ul>
+</div>

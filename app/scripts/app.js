@@ -27,31 +27,46 @@ angular
 
       .state('home', {
         url: '/',
-        templateUrl: 'views/main.html'
+        templateUrl: '/views/main.html'
       })
 
       .state('worm', {
         url: '/worm',
-        templateUrl: 'views/quest-worm.html',
+        templateUrl: '/views/quest-worm.html',
         controller: 'QuestWormCtrl'
       })
 
       .state('tak', {
         url: '/tak',
-        templateUrl: 'views/quest-tak.html',
+        templateUrl: '/views/quest-tak.html',
         controller: 'QuestTakCtrl'
       })
 
       .state('bever', {
         url: '/bever',
-        templateUrl: 'views/quest-bever.html',
-        controller: 'QuestBeverCtrl'
+        controller: 'QuestBeverCtrl',
+        templateUrl: '/views/quest-bever.html'
       })
+
+        .state('bever.waterdiertjes', {
+          url: '/waterdiertjes',
+          templateUrl: '/templates/bever-waterdiertjes.tpl.html'
+        })
+
+        .state('bever.holbewoners', {
+          url: '/holbewoners',
+          templateUrl: '/templates/bever-holbewoners.tpl.html'
+        })
+
+        .state('bever.geschorsteschoften', {
+          url: '/geschorsteschoften',
+          templateUrl: '/templates/bever-geschorsteschoften.tpl.html'
+        })
 
       .state('bloem', {
         url: '/bloem',
-        templateUrl: 'views/quest-bloem.html',
+        templateUrl: '/views/quest-bloem.html',
         controller: 'QuestBloemCtrl'
-      })
+      });
 
   });
