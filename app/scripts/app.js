@@ -16,35 +16,62 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+  .config(function ($stateProvider, $urlRouterProvider) {
+    
+    $urlRouterProvider.otherwise('/'); // if all fails
+    
+    $stateProvider
+
+      .state('home', {
+        url: '/',
+        templateUrl: '/views/main.html'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .when('/quest-bever', {
-        templateUrl: 'views/quest-bever.html',
-        controller: 'QuestBeverCtrl'
-      })
-      .when('/quest-worm', {
-        templateUrl: 'views/quest-worm.html',
+
+      .state('worm', {
+        url: '/worm',
+        templateUrl: '/views/quest-worm.html',
         controller: 'QuestWormCtrl'
       })
-      .when('/quest-tak', {
-        templateUrl: 'views/quest-tak.html',
+
+      .state('tak', {
+        url: '/tak',
+        templateUrl: '/views/quest-tak.html',
         controller: 'QuestTakCtrl'
       })
-      .when('/quest-bloem', {
-        templateUrl: 'views/quest-bloem.html',
-        controller: 'QuestBloemCtrl'
+
+      .state('bever', {
+        url: '/bever',
+        controller: 'QuestBeverCtrl',
+        templateUrl: '/views/quest-bever.html'
       })
-      .otherwise({
-        redirectTo: '/'
+
+      .state('bever-keuzes', {
+        url: '/bever/keuzes',
+        templateUrl: '/templates/bever-keuze.tpl.html'
+      })
+
+      .state('bever-opdracht-waterdiertjes', {
+        url: '/bever/waterdiertjes',
+        templateUrl: '/templates/bever-waterdiertjes.tpl.html'
+      })
+
+      .state('bever-opdracht-holbewoners', {
+        url: '/bever/holbewoners',
+        templateUrl: '/templates/bever-holbewoners.tpl.html'
+      })
+
+      .state('bever-opdracht-geschorsteschoften', {
+        url: '/bever/geschorsteschoften',
+        templateUrl: '/templates/bever-geschorsteschoften.tpl.html'
+      })
+
+      .state('bloem', {
+        url: '/bloem',
+        templateUrl: '/views/quest-bloem.html',
+        controller: 'QuestBloemCtrl'
       });
+
   });

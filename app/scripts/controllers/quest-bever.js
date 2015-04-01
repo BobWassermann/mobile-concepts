@@ -8,7 +8,7 @@
  * Controller of the mobileConceptsApp
  */
 angular.module('mobileConceptsApp')
-  .controller('QuestBeverCtrl', function ($scope) {
+  .controller('QuestBeverCtrl', function ($scope, $state) {
     $scope.messages = [
       'Hoi, ik ben Bob de Bolle Bever.',
       'Ik speelde verstoppertje met mijn vriendjes, maar ze zijn er vandoor.',
@@ -19,27 +19,16 @@ angular.module('mobileConceptsApp')
       'Holbewoners',
       'Geschorste schoften'
     ];
-  }).directive('tekstBallon', function(){
-      return {
-        restrict: 'A',
-        scope: true,
-        template: '<ng-include src="getTemplateUrl()" />',
-        controller: function($scope) {
-          $scope.clicked = 0;
-          $scope.click = function(){
-            $scope.clicked++;
-          };
-          $scope.loadOpdracht = function($index){
-            return $index;
-            // return '/templates/bever-opdracht-' + $index + '.tpl.html';
-          };
-          $scope.getTemplateUrl = function() {
-            if($scope.clicked <= ($scope.messages.length - 1)) {
-              return '/templates/bever-tekstballon.tpl.html';
-            } else {
-              return '/templates/bever-keuze.tpl.html';
-            }
-          };
-        }
-      };
+
+    $scope.clicked = 0;
+
+    $scope.click = function(){
+      var len = $scope.messages.length - 2;
+      if($scope.clicked <= len) {
+        $scope.clicked++;
+      } else {
+        $state.go('bever-keuzes');
+      }
+
+    };
 });
