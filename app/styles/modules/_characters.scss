@@ -12,6 +12,15 @@ $characters: vogel worm bever tak bloem;
   50%       { @include transform(translateY(0%)   translateX(-50%)) }
 }
 
+@include keyframes(vogel) {
+  from {
+    @include transform(translateY(50vh));
+  }
+  to {
+    @include transform(translateY(-17vh));
+  }
+}
+
 @each $animal in $characters {
   .char.#{$animal} {
     background: center/contain url(/images/characters/#{$animal}.png) no-repeat;
@@ -40,6 +49,9 @@ $characters: vogel worm bever tak bloem;
   @include size($char--size*2);
   &:after {
     display: none;
+  }
+  &.vogel {
+    @include animation(vogel $main-menu--anim ease-out forwards);
   }
 }
 
