@@ -1,19 +1,19 @@
 <section id="bever" class="view" ng-controller="QuestBeverCtrl">
   <a ui-sref="home"><div class="nav home"></div></a>
-  <div class="overlay">
-	  <div class="checkbox animated rubberBand">
-	    <h3>Willen jullie deze opdracht nu doen?</h3>
-	      <ul>
-	        <li ng-repeat="i in validatie" ui-sref="bever-opdracht-{{i | removeSpacesThenLowercase}}">{{i}}</li>
-	      </ul>
-	  </div>
-  </div>
   <div class="char bever"></div>
 
-  <div class="tekstballon bever">
-	Ga op zoek naar kleine beestjes. Ze verschuilen zich graag op vochtige plekjes. Vang ze voorzichtig en bekijk ze heel goed!
-	<br>
-	Gebruik voor deze opdracht jullie loep <div class="loep"></div>
+  <div class="tekstballon bever" ng-click="click()">
+    <span>{{messages[1][1][clicked]}}</span>
+  </div>
+  <!-- <div class="loep"></div> -->
+
+    <div class="overlay">
+    <div class="checkbox animated rubberBand">
+      <h3>Willen jullie deze opdracht nu doen?</h3>
+        <ul>
+          <li ng-repeat="i in validatie" ui-sref="bever-opdracht-{{i | removeSpacesThenLowercase}}">{{i}}</li>
+        </ul>
+    </div>
   </div>
 
 
