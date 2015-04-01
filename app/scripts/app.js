@@ -53,19 +53,24 @@ angular
         templateUrl: '/templates/bever-keuze.tpl.html'
       })
 
-      .state('bever-opdracht-waterdiertjes', {
-        url: '/bever/waterdiertjes',
-        templateUrl: '/templates/bever-waterdiertjes.tpl.html'
+      .state('bever-opdracht-kleinebeestjes', {
+        url: '/bever/kleinebeestjes',
+        templateUrl: '/templates/bever-kleinebeestjes.tpl.html'
       })
 
-      .state('bever-opdracht-holbewoners', {
-        url: '/bever/holbewoners',
-        templateUrl: '/templates/bever-holbewoners.tpl.html'
+      .state('bever-opdracht-degrotespeurtocht', {
+        url: '/bever/degrotespeurtocht',
+        templateUrl: '/templates/bever-degrotespeurtocht.tpl.html'
       })
 
-      .state('bever-opdracht-geschorsteschoften', {
-        url: '/bever/geschorsteschoften',
-        templateUrl: '/templates/bever-geschorsteschoften.tpl.html'
+      .state('bever-opdracht-spullenverzamelen', {
+        url: '/bever/spullenverzamelen',
+        templateUrl: '/templates/bever-spullenverzamelen.tpl.html'
+      })
+
+      .state('bever-opdracht-nietnu', {
+        url: '/bever/keuzes',
+        templateUrl: '/templates/bever-keuze.tpl.html'
       })
 
       .state('bloem', {

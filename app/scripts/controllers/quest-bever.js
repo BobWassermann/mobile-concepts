@@ -15,11 +15,14 @@ angular.module('mobileConceptsApp')
       'Kunnen jullie mij helpen mijn vriendjes terug te vinden?'
     ];
     $scope.opdrachten = [
-      'Waterdiertjes',
-      'Holbewoners',
-      'Geschorste schoften'
+      'Kleine beestjes',
+      'De grote speurtocht',
+      'Spullen verzamelen'
     ];
-
+    $scope.validatie = [
+      'Ja graag!',
+      'Niet nu'
+    ];
     $scope.clicked = 0;
 
     $scope.click = function(){

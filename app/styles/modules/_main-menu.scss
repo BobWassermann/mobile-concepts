@@ -67,5 +67,6 @@ $nav--size: 10vw;
   z-index: 999;
   top: 2%;
   left: 2%;
+  z-index: 10;
   @include size($nav--size*1);
 }
