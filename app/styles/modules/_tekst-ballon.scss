@@ -32,7 +32,7 @@ $tekstballon--caret-size: 30px;
 	@if $position == left {
 		left: 20%;
 	} @else if $position == right {
-		top: 25%;
+		top: 45%;
 		width: 50%;
 		left: 10%;
 	}

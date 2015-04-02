@@ -20,7 +20,8 @@ angular.module('mobileConceptsApp')
       if($scope.clicked <= len) {
         $scope.clicked++;
       } else {
-        document.getElementById('vogel').style.display = 'none';
+        document.querySelector('.tekstballon.vogel').style.display = 'none';
+        document.querySelector('.vogel').style.display = 'none';
       }
 
     };
