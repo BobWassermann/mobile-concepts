@@ -10,7 +10,12 @@
       <img src="/images/achtergrond-main-background3.png" />
     </div>
   </div>
+  <section id="vogel" class="view" ng-controller="QuestVogelCtrl">
   <div class="char vogel"></div>
+  <div class="tekstballon vogel" ng-click="click()">
+    <span>{{messages[clicked]}}</span>
+  </div>
+  </section>
   <a ui-sref="worm"><div class="char worm"></div></a>
   <a ui-sref="tak"><div class="char tak"></div></a>
   <a ui-sref="bever"><div class="char bever"></div></a>
