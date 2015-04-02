@@ -68,9 +68,9 @@ angular
         templateUrl: '/templates/bever-spullenverzamelen.tpl.html'
       })
 
-      .state('bever-opdracht-nietnu', {
-        url: '/bever/keuzes',
-        templateUrl: '/templates/bever-keuze.tpl.html'
+      .state('bever-opdracht-keuzes', {
+        url: '/bever/opdracht/keuzes',
+        templateUrl: '/templates/bever-keuze-opdracht.tpl.html'
       })
 
       .state('bloem', {

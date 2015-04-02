@@ -46,18 +46,22 @@ angular.module('mobileConceptsApp')
       'De grote speurtocht',
       'Spullen verzamelen'
     ];
-    $scope.validatie = [
-      'Ja graag!',
-      'Niet nu'
-    ];
     $scope.clicked = 0;
 
     $scope.click = function(){
       var len = $scope.messages.length;
-      if($scope.clicked <= len) {
-        $scope.clicked++;
+      if($state.is('bever')){
+        if($scope.clicked <= len) {
+          $scope.clicked++;
+        } else {
+          $state.go('bever-keuzes');
+        }
       } else {
-        $state.go('bever-keuzes');
+        if($scope.clicked <= len) {
+          $scope.clicked++;
+        } else {
+          $state.go('bever-opdracht-keuzes');
+        }
       }
 
     };
