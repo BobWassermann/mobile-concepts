@@ -15,7 +15,7 @@ angular.module('mobileConceptsApp')
     // $scope.opdrachten = [
     //   'Kleine beestjes',
     //   'De grote speurtocht',
-    //   'Spullen verzamelen'
+    //   'Spullen verzamelen't
     // ];
     // $scope.validatie = [
     //   'Ja graag!',

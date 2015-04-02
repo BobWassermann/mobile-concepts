@@ -17,7 +17,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'ct.ui.router.extras'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     
@@ -58,19 +59,34 @@ angular
         templateUrl: '/templates/bever-kleinebeestjes.tpl.html'
       })
 
+        .state('bever-opdracht-kleinebeestjes-2', {
+          url: '/bever/kleinebeestjes/2',
+          templateUrl: '/templates/bever-kleinebeestjes-2.tpl.html'
+        })
+
       .state('bever-opdracht-degrotespeurtocht', {
         url: '/bever/degrotespeurtocht',
         templateUrl: '/templates/bever-degrotespeurtocht.tpl.html'
       })
+
+        .state('bever-opdracht-degrotespeurtocht-2', {
+          url: '/bever/degrotespeurtocht/2',
+          templateUrl: '/templates/bever-degrotespeurtocht-2.tpl.html'
+        })
 
       .state('bever-opdracht-spullenverzamelen', {
         url: '/bever/spullenverzamelen',
         templateUrl: '/templates/bever-spullenverzamelen.tpl.html'
       })
 
-      .state('bever-opdracht-nietnu', {
-        url: '/bever/keuzes',
-        templateUrl: '/templates/bever-keuze.tpl.html'
+        .state('bever-opdracht-spullenverzamelen-2', {
+          url: '/bever/spullenverzamelen/2',
+          templateUrl: '/templates/bever-spullenverzamelen-2.tpl.html'
+        })
+
+      .state('bever-opdracht-keuzes', {
+        url: '/bever/opdracht/keuzes',
+        templateUrl: '/templates/bever-keuze-opdracht.tpl.html'
       })
 
       .state('bloem', {

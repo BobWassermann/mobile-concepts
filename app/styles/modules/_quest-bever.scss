@@ -11,5 +11,6 @@ section#bever {
 
 section#bever .tekstballon {
 	@include tekstballon(left);
-  bottom: $quest-bever--bever-size/2.5;
+  bottom: $quest-bever--bever-size/3;
+  left: $quest-bever--bever-size/2;
 }

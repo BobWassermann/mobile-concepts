@@ -2,3 +2,9 @@ $border-radius--g: 5px;
 $margin--g: 0.4em;
 $padding--g: $margin--g;
 $orange: #F1741C;
+
+%ohLordCenterMyChildren {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+}
