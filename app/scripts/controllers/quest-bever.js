@@ -20,8 +20,7 @@ angular.module('mobileConceptsApp')
       ['kleinebeestjes',
         [
           'Ga op zoek naar kleine beestjes.',
-          'Ze verschuilen zich graag op vochtige plekjes.',
-          'Vang ze voorzichtig en bekijk ze heel goed!',
+          'Ze verschuilen zich graag op vochtige plekjes. Vang ze voorzichtig en bekijk ze heel goed!',
           'Gebruik voor deze opdracht jullie loep.'
         ]
       ],
@@ -29,8 +28,7 @@ angular.module('mobileConceptsApp')
         [
           'In de natuur laten de meeste dieren zich niet zo gemakkelijk zien.',
           'We kunnen er wel achter komen waar het diertje zich verstopt heeft.',
-          'Ben jij een echte detective?',
-          'Volg de sporen.'
+          'Ben jij een echte detective? Volg de sporen.'
         ]
       ],
       ['spullenverzamelen',
@@ -49,7 +47,7 @@ angular.module('mobileConceptsApp')
     $scope.clicked = 0;
 
     $scope.click = function(){
-      var len = $scope.messages.length;
+      var len = 1;
       if($state.is('bever')){
         if($scope.clicked <= len) {
           $scope.clicked++;
