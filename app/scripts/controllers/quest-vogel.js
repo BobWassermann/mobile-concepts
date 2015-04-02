@@ -8,19 +8,11 @@
  * Controller of the mobileConceptsApp
  */
 angular.module('mobileConceptsApp')
-  .controller('QuestVogelCtrl', function ($scope, $state) {
+  .controller('QuestVogelCtrl', function ($scope) {
     $scope.messages = [
       'Kunnen jullie mijn vriendjes helpen?'
     ];
-    // $scope.opdrachten = [
-    //   'Kleine beestjes',
-    //   'De grote speurtocht',
-    //   'Spullen verzamelen't
-    // ];
-    // $scope.validatie = [
-    //   'Ja graag!',
-    //   'Niet nu'
-    // ];
+
     $scope.clicked = 0;
 
     $scope.click = function(){
