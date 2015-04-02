@@ -12,15 +12,7 @@ angular.module('mobileConceptsApp')
     $scope.messages = [
       'Kunnen jullie mijn vriendjes helpen?'
     ];
-    // $scope.opdrachten = [
-    //   'Kleine beestjes',
-    //   'De grote speurtocht',
-    //   'Spullen verzamelen't
-    // ];
-    // $scope.validatie = [
-    //   'Ja graag!',
-    //   'Niet nu'
-    // ];
+
     $scope.clicked = 0;
 
     $scope.click = function(){

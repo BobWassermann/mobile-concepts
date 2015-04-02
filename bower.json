@@ -12,8 +12,7 @@
     "angular-touch": "^1.3.0",
     "animate.css": "~3.2.6",
     "angular-ui-router": "~0.2.13",
-    "ui-router-extras": "~0.0.13",
-    "ui-sref-fastclick-decorator": "https://gist.github.com/5a01fbfdcce766c8af75.git"
+    "ui-router-extras": "~0.0.13"
   },
   "devDependencies": {
     "angular-mocks": "^1.3.0"
