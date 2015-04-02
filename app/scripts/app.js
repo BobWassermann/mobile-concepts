@@ -20,8 +20,30 @@ angular
     'ui.router',
     'ct.ui.router.extras'
   ])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $provide) {
     
+    $provide.decorator('uiSrefDirective', function ($delegate) {
+      var originalUiSref, originalUiSrefLink;
+      originalUiSref = $delegate[0];
+      originalUiSrefLink = originalUiSref.link;
+ 
+      $delegate[0].compile = function () {
+ 
+        return function (scope, element, attrs, uiSref) {
+          var originalBind = element.bind, enableFastClick = !angular.isDefined(attrs.disableFastclick);
+ 
+          element.bind = function (event, callback) {
+            originalBind.call(element, event === 'click' && enableFastClick ? 'touchstart mousedown' : event, function () {
+              callback.apply(element, arguments);
+            });
+          };
+ 
+          originalUiSrefLink.call($delegate, scope, element, attrs, uiSref);
+        };
+      };
+ 
+      return $delegate;
+    });
     $urlRouterProvider.otherwise('/'); // if all fails
     
     $stateProvider
