@@ -8,7 +8,7 @@
  * Controller of the mobileConceptsApp
  */
 angular.module('mobileConceptsApp')
-  .controller('QuestBeverCtrl', function ($scope, $state) {
+  .controller('QuestBeverCtrl', function ($scope, $state, $previousState) {
     $scope.messages = [
       ['intro',
         [
@@ -63,6 +63,9 @@ angular.module('mobileConceptsApp')
           $state.go('bever-opdracht-keuzes');
         }
       }
-
+    };
+    
+    $scope.goPrevious = function(){
+      $state.go($previousState.get().state.name + '-2');
     };
 });
