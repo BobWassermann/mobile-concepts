@@ -8,7 +8,7 @@
  * Controller of the mobileConceptsApp
  */
 angular.module('mobileConceptsApp')
-  .controller('QuestVogelCtrl', function ($scope, $state) {
+  .controller('QuestVogelCtrl', function ($scope) {
     $scope.messages = [
       'Kunnen jullie mijn vriendjes helpen?'
     ];

@@ -39,11 +39,22 @@ angular.module('mobileConceptsApp')
         ]
       ]
     ];
+    
     $scope.opdrachten = [
       'Kleine beestjes',
       'De grote speurtocht',
       'Spullen verzamelen'
     ];
+
+    $scope.kleinebeestjes = [
+      'kever',
+      'mier',
+      'pissebed',
+      'slak',
+      'spin',
+      'worm'
+    ];
+
     $scope.clicked = 0;
 
     $scope.click = function(){
@@ -60,6 +71,14 @@ angular.module('mobileConceptsApp')
         } else {
           $state.go('bever-opdracht-keuzes');
         }
+      }
+    };
+
+    $scope.addFlip = function(){
+      if(this.class == 'animation'){
+        this.class = '';
+      } else {
+        this.class = 'animation';
       }
     };
     

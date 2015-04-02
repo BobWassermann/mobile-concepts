@@ -1,5 +1,11 @@
 $keuze--width: 60%;
 
+@include keyframes(image-flip) {
+  100% {
+    @include transform(scale(2) rotateY(-180deg));
+  }
+}
+
 .keuze-wrap {
   @extend %ohLordCenterMyChildren;
   @include user-select(none);
@@ -44,6 +50,30 @@ $keuze--width: 60%;
       @include mobile {
         padding: 0.5em 0;
       }
+    }
+  }
+}
+
+.keuze.full {
+  position: fixed;
+  border-radius: 0;
+  height: 100vh;
+  left: 40%;
+  @include mobile {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.keuze.image {
+  li {
+    float: left;
+    margin: 1%;
+    @include size(30% 30vh);
+    background-size: cover;
+    background-position: center;
+    &.animation {
+      @include animation(image-flip 1s forwards);
     }
   }
 }
