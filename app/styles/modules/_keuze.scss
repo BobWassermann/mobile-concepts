@@ -1,8 +1,15 @@
 $keuze--width: 60%;
+$keuze--flip-length: 0.7s;
 
 @include keyframes(image-flip) {
   100% {
-    @include transform(scale(2) rotateY(-180deg));
+    @include transform(scale(2.5) rotateY(-180deg));
+  }
+}
+
+@include keyframes(slide-in) {
+  from {
+    @include transform(translateY(100%));
   }
 }
 
@@ -77,8 +84,33 @@ $keuze--width: 60%;
     @include size(30% 30vh);
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+    span {
+      opacity: 0;
+      background: #fff;
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 100%;
+      border-radius: $border-radius--g; 
+      h1 {
+        font-size: 1rem;
+        padding: 0.1em;
+      }
+      p {
+        font-size: 0.5rem;
+      }
+    }
     &.animation {
-      @include animation(image-flip 1s forwards);
+      @include animation(image-flip $keuze--flip-length forwards);
+      span {
+        opacity: 1;
+        @include animation(slide-in $keuze--flip-length forwards);
+      }
+      span > * {
+        opacity: 1;
+        @include transition($keuze--flip-length);
+        @include transform(rotateY(-180deg));
+      }
     }
   }
 }

@@ -47,12 +47,30 @@ angular.module('mobileConceptsApp')
     ];
 
     $scope.kleinebeestjes = [
-      'kever',
-      'mier',
-      'pissebed',
-      'slak',
-      'spin',
-      'worm'
+      {
+        name: 'kever',
+        fact: 'Er zijn in totaal zo een 5000 keversoorten over de hele wereld.'
+      },
+      {
+        name: 'mier',
+        fact: 'De communicatie van mieren verloopt door middel van geurstoffen, ook wel feromonen genoemd.'
+      },
+      {
+        name: 'pissebed',
+        fact: 'De pissebed leeft van plantaardig materiaal, zoals rottend hout en bladeren.'
+      },
+      {
+        name: 'slak',
+        fact: 'Slakken zijn de enige weekdieren die ook op het land leven.'
+      },
+      {
+        name: 'spin',
+        fact: 'In Belgie en Nederland leven bijna 700 verschillende soorten spinnen.'
+      },
+      {
+        name: 'worm',
+        fact: 'Bij het trillen van de bodem kruipen de regenwormen uit de grond, dit kan door de loopbewegingen van dieren worden veroorzaakt of door menselijk handelen zoals met behulp van een stok of greep.'
+      }
     ];
 
     $scope.clicked = 0;
@@ -75,7 +93,7 @@ angular.module('mobileConceptsApp')
     };
 
     $scope.addFlip = function(){
-      if(this.class == 'animation'){
+      if(this.class === 'animation'){
         this.class = '';
       } else {
         this.class = 'animation';

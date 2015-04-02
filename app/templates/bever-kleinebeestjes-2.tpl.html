@@ -5,7 +5,15 @@
    <div class="keuze image full animated bounceInRight">
     <h3>Welke beestjes heb je gevonden?</h3>
       <ul>
-        <li ng-mousedown="addFlip()" ng-class="class" ng-repeat="i in kleinebeestjes" style="background-image: url(/images/opdrachten/bever/kleinebeestjes/{{i}}.jpg)"></li>
+        <li ng-mousedown="addFlip()"
+            ng-class="class"
+            ng-repeat="i in kleinebeestjes"
+            style="background-image: url(/images/opdrachten/bever/kleinebeestjes/{{i.name}}.jpg)">
+          <span>
+            <h1>{{i.name | capitalize}}</h1>
+            <p>{{i.fact}}</p>
+          </span>
+        </li>
       </ul>
   </div>
 
