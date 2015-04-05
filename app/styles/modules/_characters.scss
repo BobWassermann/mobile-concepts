@@ -82,9 +82,9 @@ $characters: vogel worm bever tak bloem;
 }
 
 .char.tak {
-  top: 68%;
+  top: 66%;
   left: 15%;
-  @include size($char--size*0.8);
+  @include size($char--size*1);
   #main-menu & {
     @include animation(background2 $main-menu--anim*1.3 ease-out forwards);
   }
