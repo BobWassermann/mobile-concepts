@@ -21,10 +21,7 @@ angular.module('mobileConceptsApp')
         $scope.clicked++;
       } else {
         document.querySelector('.tekstballon.vogel').style.display = 'none';
-        document.querySelector('.vogel').style.display = 'none';
+        document.querySelector('.vogel').classList.add('weg');      
       }
-
     };
-
-
 });
