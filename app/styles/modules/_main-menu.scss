@@ -41,7 +41,7 @@ $main-menu--anim: 1s;
     @include transform(translate(30vh, 6vh));
   }
   to {
-    @include transform(translate(110vh, -30vh));
+    @include transform(translate(-50vh, -70vh));
   }
 }
 
@@ -92,5 +92,3 @@ $nav--size: 10vw;
 #vogel {
   position: absolute;
 }
-
-.vogel.weg {}
