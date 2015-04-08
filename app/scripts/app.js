@@ -8,19 +8,10 @@
  *
  * Main module of the application.
  */
-angular
-  .module('mobileConceptsApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'ui.router',
-    'ct.ui.router.extras'
-  ])
-  .config(function ($stateProvider, $urlRouterProvider, $provide) {
+
+var app = angular.module('mobileConceptsApp', ['ngResource', 'ngRoute', 'ngSanitize', 'ngTouch', 'ui.router', 'ct.ui.router.extras']);
+
+app.config(function ($stateProvider, $urlRouterProvider, $provide) {
     
     $provide.decorator('uiSrefDirective', function ($delegate) {
       var originalUiSref, originalUiSrefLink;
@@ -44,6 +35,7 @@ angular
  
       return $delegate;
     });
+   
     $urlRouterProvider.otherwise('/'); // if all fails
     
     $stateProvider
@@ -116,5 +108,4 @@ angular
         templateUrl: '/views/quest-bloem.html',
         controller: 'QuestBloemCtrl'
       });
-
-  });
+});
