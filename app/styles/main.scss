@@ -4,6 +4,7 @@
 
 * {
   @include box-sizing(border-box);
+  @include user-select(none);
 }
 
 body {

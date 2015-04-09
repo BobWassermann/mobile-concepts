@@ -62,19 +62,19 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         controller: 'QuestBeverCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-bever.html' },
-          'keuzes@bever':         { templateUrl: '/templates/bever-keuze.tpl.html' }
+          'keuzes@bever':         { templateUrl: '/templates/bever-keuze.tpl.html' },
+          'tekstballon@bever':    { templateUrl: '/templates/bever-tekstballon.tpl.html' }
         }
       })
 
       .state('bever.kleinebeestjes', {
-        url: '/bever/kleinebeestjes',
-        templateUrl: '/templates/bever-kleinebeestjes.tpl.html'
+        url: '/kleinebeestjes',
+        templateUrl: '/templates/bever-kleinebeestjes.tpl.html',
+        controller: function($scope){
+          $scope.clickDone = false;
+          document.querySelector('.fullscreen.keuze-wrap').style.display = 'none';
+        }
       })
-
-        .state('bever-opdracht-kleinebeestjes-2', {
-          url: '/bever/kleinebeestjes/2',
-          templateUrl: '/templates/bever-kleinebeestjes-2.tpl.html'
-        })
 
       .state('bever-opdracht-degrotespeurtocht', {
         url: '/bever/degrotespeurtocht',

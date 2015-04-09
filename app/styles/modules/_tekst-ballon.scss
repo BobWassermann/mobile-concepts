@@ -26,7 +26,6 @@ $tekstballon--caret-size: 30px;
 	width: 70%;
 	cursor: pointer;
 	@extend %ohLordCenterMyChildren;
-	@include user-select(none);
 	@include animation(tekstballon 1s ease-in-out);
 	@include box-sizing(border-box);
 	@if $position == left {

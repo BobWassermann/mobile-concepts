@@ -1,9 +1,20 @@
-<section id="bever" class="view" ng-controller="QuestBeverCtrl">
-  <div class="char bever"></div>
+<div class="tekstballon bever" ng-click="click()" ng-show="!clickDone">
+  <span>{{messages[1][1][clicked]}}</span>
+</div>
 
-  <div class="tekstballon bever" ng-click="click()">
-    <span>{{messages[1][1][clicked]}}</span>
-  </div>
-  <!-- <div class="loep"></div> -->
-
-</section>
+<div class="keuze image full animated bounceInRight">
+  
+  <h3>Welke beestjes heb je gevonden?</h3>
+    <ul>
+      <li ng-mousedown="addFlip()"
+          ng-class="class"
+          ng-repeat="i in kleinebeestjes"
+          style="background-image: url(/images/opdrachten/bever/kleinebeestjes/{{i.name}}.jpg)">
+        <div class="check" ng-click="">✓</div>
+        <span>
+          <h1>{{i.name | capitalize}}</h1>
+          <p>{{i.fact}}</p>
+        </span>
+      </li>
+    </ul>
+</div>

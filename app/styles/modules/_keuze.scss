@@ -1,9 +1,10 @@
 $keuze--width: 60%;
 $keuze--flip-length: 0.7s;
+$keuze--check-size: 30px;
 
 @include keyframes(image-flip) {
   100% {
-    @include transform(scale(2.5) rotateY(-180deg));
+    @include transform(scale(2.8) rotateY(-180deg));
   }
 }
 
@@ -15,7 +16,6 @@ $keuze--flip-length: 0.7s;
 
 .keuze-wrap {
   @extend %ohLordCenterMyChildren;
-  @include user-select(none);
   .char.bever {
     left: 0;
   }
@@ -53,7 +53,6 @@ $keuze--flip-length: 0.7s;
       color: $orange;
       border-radius: $border-radius--g;
       cursor: pointer;
-      @include user-select(none);
       @include mobile {
         padding: 0.5em 0;
       }
@@ -78,6 +77,18 @@ $keuze--flip-length: 0.7s;
 }
 
 .keuze.image {
+  .check {
+    display: none;
+    position: absolute;
+    display: inline-block;
+    color: #2ecc71;
+    line-height: 2.2em;
+    @include size($keuze--check-size);
+    @include transform(rotateY(-180deg) translateX(50%));
+    background: #fff;
+    border-radius: 180px;
+    left: 50%;
+  }
   li {
     float: left;
     margin: 1%;
@@ -98,10 +109,15 @@ $keuze--flip-length: 0.7s;
       }
       p {
         font-size: 0.5rem;
+        width: 80%;
+        margin: 1rem auto;
       }
     }
     &.animation {
       @include animation(image-flip $keuze--flip-length forwards);
+      .check {
+        display: block;
+      }
       span {
         opacity: 1;
         @include animation(slide-in $keuze--flip-length forwards);

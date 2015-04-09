@@ -77,19 +77,15 @@ angular.module('mobileConceptsApp')
 
     $scope.click = function(){
       var len = 1;
-      if($state.is('bever')){
-        if($scope.clicked <= len) {
-          $scope.clicked++;
-        } else {
-          $scope.clickDone = true;
-        }
+      if($scope.clicked <= len) {
+        $scope.clicked++;
+      } else {
+        $scope.clickDone = true;
       }
     };
 
     $scope.addFlip = function(){
-      if(this.class === 'animation'){
-        this.class = '';
-      } else {
+      if(this.class !== 'animation'){
         this.class = 'animation';
       }
     };

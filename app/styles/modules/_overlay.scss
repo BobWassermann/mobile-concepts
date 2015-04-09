@@ -44,7 +44,6 @@ $checkbox--width: 50%;
       color: $orange;
       border-radius: $border-radius--g;
       cursor: pointer;
-      @include user-select(none);
     }
   }
 }
