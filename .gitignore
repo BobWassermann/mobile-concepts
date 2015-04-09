@@ -5,3 +5,4 @@ dist
 bower_components
 cordova/www/*
 .DS_Store
+karma.conf.js
