@@ -1,31 +1,60 @@
 $main-menu--anim: 1s;
 
-@include keyframes(background1) {
-  from {
-    @include transform(translateY(30vh));
+@include tablet {
+  @include keyframes(background1) {
+    from {
+      @include transform(translateY(30vh));
+    }
+    to {
+      @include transform(translateY(-5vh));
+    }
   }
-  to {
-    @include transform(translateY(-14vh));
+
+  @include keyframes(background2) {
+    from {
+      @include transform(translateY(50vh));
+    }
+    to {
+      @include transform(translateY(calc(-32vh)));
+    }
+  }
+
+  @include keyframes(background3) {
+    from {
+      @include transform(translateY(60vh));
+    }
+    to {
+      @include transform(translateY(-32vh));
+    }
   }
 }
 
-@include keyframes(background2) {
-  from {
-    @include transform(translateY(50vh));
-  }
-  to {
-    @include transform(translateY(calc(-46vh + 30px)));
-  }
-}
+// @include keyframes(background1) {
+//   from {
+//     @include transform(translateY(30vh));
+//   }
+//   to {
+//     @include transform(translateY(-50vh));
+//   }
+// }
 
-@include keyframes(background3) {
-  from {
-    @include transform(translateY(60vh));
-  }
-  to {
-    @include transform(translateY(-35vh));
-  }
-}
+// @include keyframes(background2) {
+//   from {
+//     @include transform(translateY(50vh));
+//   }
+//   to {
+//     @include transform(translateY(calc(-46vh + 30px)));
+//   }
+// }
+
+// @include keyframes(background3) {
+//   from {
+//     @include transform(translateY(60vh));
+//   }
+//   to {
+//     @include transform(translateY(-35vh));
+//   }
+// }
 
 @include keyframes(vogel) {
   from {
