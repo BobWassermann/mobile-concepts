@@ -60,15 +60,13 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       .state('bever', {
         url: '/bever',
         controller: 'QuestBeverCtrl',
-        templateUrl: '/views/quest-bever.html'
+        views: {
+          '':                     { templateUrl: '/views/quest-bever.html' },
+          'keuzes@bever':         { templateUrl: '/templates/bever-keuze.tpl.html' }
+        }
       })
 
-      .state('bever-keuzes', {
-        url: '/bever/keuzes',
-        templateUrl: '/templates/bever-keuze.tpl.html'
-      })
-
-      .state('bever-opdracht-kleinebeestjes', {
+      .state('bever.kleinebeestjes', {
         url: '/bever/kleinebeestjes',
         templateUrl: '/templates/bever-kleinebeestjes.tpl.html'
       })

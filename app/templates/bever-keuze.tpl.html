@@ -1,12 +1,6 @@
-<section id="bever" class="view keuze-wrap" ng-controller="QuestBeverCtrl">
-  <div class="char bever"></div>
-
-  <div class="keuze animated rubberBand">
-    <h3>Met welke klusjes willen jullie helpen?</h3>
-      <ul>
-        <li ng-repeat="i in opdrachten" ui-sref="bever-opdracht-{{i | removeSpacesThenLowercase}}">{{i}}</li>
-      </ul>
-  </div>
-
-
-</section>
+<div class="keuze animated rubberBand">
+  <h3>Met welke klusjes willen jullie helpen?</h3>
+    <ul>
+      <li ng-repeat="i in opdrachten" ui-sref="bever-opdracht-{{i | removeSpacesThenLowercase}}">{{i}}</li>
+    </ul>
+</div>

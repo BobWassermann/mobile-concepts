@@ -81,13 +81,7 @@ angular.module('mobileConceptsApp')
         if($scope.clicked <= len) {
           $scope.clicked++;
         } else {
-          $state.go('bever-keuzes');
-        }
-      } else {
-        if($scope.clicked <= len) {
-          $scope.clicked++;
-        } else {
-          $state.go('bever-opdracht-keuzes');
+          $scope.clickDone = true;
         }
       }
     };
