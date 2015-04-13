@@ -116,7 +116,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       })
 
       .state('bever.kleinebeestjes', {
-        url: '/bever/kleinebeestjes',
+        url: '/kleinebeestjes',
         templateUrl: '/templates/bever-kleinebeestjes.tpl.html',
         controller: function(){
           document.querySelector('.fullscreen.keuze-wrap').style.display = 'none';
@@ -124,7 +124,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       })
 
       .state('bever.degrotespeurtocht', {
-        url: '/bever/degrotespeurtocht',
+        url: '/degrotespeurtocht',
         templateUrl: '/templates/bever-degrotespeurtocht.tpl.html'
       })
 
