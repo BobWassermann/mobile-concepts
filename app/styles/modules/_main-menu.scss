@@ -1,5 +1,8 @@
 $main-menu--anim: 1s;
 
+
+
+//tablet
 @include tablet {
   @include keyframes(background1) {
     from {
@@ -27,41 +30,61 @@ $main-menu--anim: 1s;
       @include transform(translateY(-32vh));
     }
   }
+
+  @include keyframes(vogel) {
+    from {
+      @include transform(translate(110vh, -30vh));
+    }
+    to {
+      @include transform(translate(30vh, 6vh));
+    }
+  }
+
+  @include keyframes(vogel-weg) {
+    from {
+      @include transform(translate(30vh, 6vh));
+    }
+    to {
+      @include transform(translate(-50vh, -70vh));
+    }
+  }
 }
 
-// @include keyframes(background1) {
-//   from {
-//     @include transform(translateY(30vh));
-//   }
-//   to {
-//     @include transform(translateY(-50vh));
-//   }
-// }
 
-// @include keyframes(background2) {
-//   from {
-//     @include transform(translateY(50vh));
-//   }
-//   to {
-//     @include transform(translateY(calc(-46vh + 30px)));
-//   }
-// }
+// desktop
+@include keyframes(background1) {
+  from {
+    @include transform(translateY(30vh));
+  }
+  to {
+    @include transform(translateY(-10vh));
+  }
+}
 
-// @include keyframes(background3) {
-//   from {
-//     @include transform(translateY(60vh));
-//   }
-//   to {
-//     @include transform(translateY(-35vh));
-//   }
-// }
+@include keyframes(background2) {
+  from {
+    @include transform(translateY(50vh));
+  }
+  to {
+    @include transform(translateY(-36vh));
+  }
+}
+
+@include keyframes(background3) {
+  from {
+    @include transform(translateY(60vh));
+  }
+  to {
+    @include transform(translateY(-37vh));
+  }
+}
 
 @include keyframes(vogel) {
   from {
     @include transform(translate(110vh, -30vh));
   }
   to {
-    @include transform(translate(30vh, 6vh));
+    @include transform(translate(35vh, 6vh));
   }
 }
 
