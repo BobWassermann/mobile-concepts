@@ -2,7 +2,7 @@
   <span>{{messages[1][1][clicked]}}</span>
 </div>
 
-<div class="keuze image full animated bounceInRight" ng-show="clickDone">
+<div class="keuze image full animated bounceInRight" ng-show="clickDone && !opdrachtDone">
   <h3>Welke beestjes heb je gevonden?</h3>
     <ul>
       <li ng-click="check()"
@@ -16,6 +16,10 @@
         </span>
       </li>
     </ul>
-    <button ng-show="checkDone">Verder</button>
+    <button ng-show="checkDone" ng-click="opdrachtDone = true">Verder</button>
     <p class="hulp" ng-hide="checkDone">Tip: Houd je vinger lang ingedrukt op een plaatje voor een leuk weetje</p>
+</div>
+
+<div class="tekstballon bever" ng-show="opdrachtDone" ui-sref="home">
+  <span>Leuk dat jullie mij geholpen hebben kleine beestjes te vinden. Willen jullie mij helpen met nog een opdracht?</span>
 </div>
