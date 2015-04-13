@@ -1,4 +1,7 @@
-<section id="worm" class="view">
-	<a ng-href="#/main"><div class="nav home"></div></a>
+<section id="worm" class="view" ng-controller="QuestWormCtrl">
   <div class="char worm"></div>
+
+  <div ui-view="tekstballon" ng-show="!clickDone"></div>
+  <div ui-view="keuzes" ng-show="clickDone" class="fullscreen keuze-wrap"></div>
+  <div ui-view></div>
 </section>

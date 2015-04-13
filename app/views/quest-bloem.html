@@ -1,5 +1,7 @@
-<section id="bloem" class="view">
-	<a ng-href="#/main"><div class="nav home"></div></a>
+<section id="bloem" class="view" ng-controller="QuestBloemCtrl">
   <div class="char bloem"></div>
-  <div class="tekstballon">Hallo ik ben Bas de blije bloem.<br> kunnen jullie mij helpen met wat klusjes? </div>
+
+  <div ui-view="tekstballon" ng-show="!clickDone"></div>
+  <div ui-view="keuzes" ng-show="clickDone" class="fullscreen keuze-wrap"></div>
+  <div ui-view></div>
 </section>

@@ -8,7 +8,7 @@
  * Controller of the mobileConceptsApp
  */
 angular.module('mobileConceptsApp')
-  .controller('QuestBeverCtrl', function ($scope, $state, $previousState) {
+  .controller('QuestBeverCtrl', function ($scope) {
     $scope.messages = [
       ['intro',
         [
@@ -72,25 +72,4 @@ angular.module('mobileConceptsApp')
         fact: 'Bij het trillen van de bodem kruipen de regenwormen uit de grond, dit kan door de loopbewegingen van dieren worden veroorzaakt of door menselijk handelen zoals met behulp van een stok of greep.'
       }
     ];
-
-    $scope.clicked = 0;
-
-    $scope.click = function(){
-      var len = 1;
-      if($scope.clicked <= len) {
-        $scope.clicked++;
-      } else {
-        $scope.clickDone = true;
-      }
-    };
-
-    $scope.addFlip = function(){
-      if(this.class !== 'animation'){
-        this.class = 'animation';
-      }
-    };
-    
-    $scope.goPrevious = function(){
-      $state.go($previousState.get().state.name + '-2');
-    };
 });

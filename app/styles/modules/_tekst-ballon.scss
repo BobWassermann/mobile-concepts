@@ -53,7 +53,7 @@ $tekstballon--caret-size: 30px;
 		} @else if $position == right {
 			top: 50%;
 			@include transform(translateY(-50%) rotate(-90deg));
-			left: calc(100% - #{$tekstballon--caret-size * 0.8});
+			left: calc(100% - #{$tekstballon--caret-size * 0.9});
 		}
 	}
 	&:after {

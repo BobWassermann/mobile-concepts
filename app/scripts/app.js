@@ -47,14 +47,32 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
 
       .state('worm', {
         url: '/worm',
-        templateUrl: '/views/quest-worm.html',
-        controller: 'QuestWormCtrl'
+        controller: 'QuestWormCtrl',
+        views: {
+          '':                     { templateUrl: '/views/quest-worm.html' },
+          'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' },
+          'tekstballon@worm' :    { templateUrl: '/templates/tekstballon.tpl.html' }
+        }
       })
 
       .state('tak', {
         url: '/tak',
-        templateUrl: '/views/quest-tak.html',
-        controller: 'QuestTakCtrl'
+        controller: 'QuestTakCtrl',
+        views: {
+          '':                     { templateUrl: '/views/quest-worm.html' },
+          'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' },
+          'tekstballon@worm' :    { templateUrl: '/templates/tekstballon.tpl.html' }
+        }
+      })
+
+      .state('bloem', {
+        url: '/bloem',
+        controller: 'QuestBloemCtrl',
+        views: {
+          '':                     { templateUrl: '/views/quest-bloem.html' },
+          'keuzes@bloem':         { templateUrl: '/templates/keuze.tpl.html' },
+          'tekstballon@bloem' :   { templateUrl: '/templates/tekstballon.tpl.html' }
+        }
       })
 
       .state('bever', {
@@ -62,8 +80,8 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         controller: 'QuestBeverCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-bever.html' },
-          'keuzes@bever':         { templateUrl: '/templates/bever-keuze.tpl.html' },
-          'tekstballon@bever':    { templateUrl: '/templates/bever-tekstballon.tpl.html' }
+          'keuzes@bever':         { templateUrl: '/templates/keuze.tpl.html' },
+          'tekstballon@bever':    { templateUrl: '/templates/tekstballon.tpl.html' }
         }
       })
 
@@ -99,11 +117,5 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       .state('bever-opdracht-keuzes', {
         url: '/bever/opdracht/keuzes',
         templateUrl: '/templates/bever-keuze-opdracht.tpl.html'
-      })
-
-      .state('bloem', {
-        url: '/bloem',
-        templateUrl: '/views/quest-bloem.html',
-        controller: 'QuestBloemCtrl'
       });
 });
