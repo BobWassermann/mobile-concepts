@@ -85,6 +85,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         url: '/kleinebeestjes',
         templateUrl: '/templates/bever-kleinebeestjes.tpl.html',
         controller: function($scope){
+          $scope.clicked = 0;
           $scope.clickDone = false;
           document.querySelector('.fullscreen.keuze-wrap').style.display = 'none';
         }
