@@ -12,37 +12,37 @@ angular.module('mobileConceptsApp')
     $scope.messages = [
       ['intro',
         [
-          'Hoi, ik ben Bob de Bolle Bever.',
-          'Ik speelde verstoppertje met mijn vriendjes, maar ze zijn er vandoor.',
-          'Kunnen jullie mij helpen mijn vriendjes terug te vinden?'
+          'Hallo kindertjes, ik ben Bas de Blije Bloem.',
+          'IK vind het heerlijk om naar de vogels te kijken.',
+          'Willen jullie samen met mij wat opdrachtjes doen?'
         ]
       ],
-      ['kleinebeestjes',
+      ['vogelsspotten',
         [
-          'Ga op zoek naar kleine beestjes.',
-          'Ze verschuilen zich graag op vochtige plekjes. Vang ze voorzichtig en bekijk ze heel goed!',
-          'Gebruik voor deze opdracht jullie loep.'
+          'Mijn vogel vriendjes hebben honger.',
+          'Laten we samen op zoek gaan naar ze en daarna eten voor ze zoeken!',
+          'Gebruik voor deze opdracht jullie verrenkijker.'
         ]
       ],
-      ['degrotespeurtocht',
+      ['poepinspecteren',
         [
-          'In de natuur laten de meeste dieren zich niet zo gemakkelijk zien.',
-          'We kunnen er wel achter komen waar het diertje zich verstopt heeft.',
-          'Ben jij een echte detective? Volg de sporen.'
+          'Ik houd van poep, het fungeert als mest en daar groei ik goed van.',
+          'Ik kan helaas geen poep vinden.',
+          'Willen jullie mij helpen met het zoeken naar poep?'
         ]
       ],
-      ['spullenverzamelen',
+      ['paardenspotten',
         [
-          'Ik wil een huisje bouwen maar dat is veel werk en ik heb er vanalles voor nodig.',
-          'Willen jullie mij helpen met het verzamelen van deze spullen?',
-          'Je hebt wel een loep nodig!'
+          'De Konikpaarden stampen mij en mijn andere bloemenvriendjes altijd plat!',
+          'Wil jij mij iets leren over de paarden zodat we hier beter mee om leren gaan?',
+          'Je hebt wel je verrenkijker nodig!'
         ]
       ]
     ];
     
     $scope.opdrachten = [
-      'Kleine beestjes',
-      'De grote speurtocht',
-      'Spullen verzamelen'
+      'Vogels spotten',
+      'Poep Inspecteren',
+      'Paarden Spotten'
     ];
   });

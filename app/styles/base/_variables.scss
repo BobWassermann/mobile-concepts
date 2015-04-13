@@ -2,6 +2,8 @@ $border-radius--g: 5px;
 $margin--g: 0.4em;
 $padding--g: $margin--g;
 $orange: #F1741C;
+$green: #2ECC71;
+$yellow: #F8E71C;
 
 %ohLordCenterMyChildren {
   @include display(flex);

@@ -1,10 +1,13 @@
 @import 'bourbon/bourbon';
-@import 'base/variables', 'base/typography', 'base/mq';
+@import 'base/variables', 'base/typography', 'base/mq', 'base/button';
 @import 'modules/add-to-homescreen', 'modules/popup', 'modules/tekst-ballon', 'modules/main-menu', 'modules/characters', 'modules/quest-bever', 'modules/quest-worm', 'modules/quest-tak', 'modules/wolken', 'modules/quest-bloem', 'modules/keuze', 'modules/overlay', 'modules/quest-vogel';
 
 * {
   @include box-sizing(border-box);
   @include user-select(none);
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {

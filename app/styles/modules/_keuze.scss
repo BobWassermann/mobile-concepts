@@ -14,6 +14,15 @@ $keuze--check-size: 30px;
   }
 }
 
+@include keyframes(check-slide) {
+  from {
+    @include transform(translateX(-50%) translateY(-100%) scale(0.7));
+  }
+  to {
+    @include transform(translateX(-50%) translateY(-50%) scale(1));
+  }
+}
+
 .keuze-wrap {
   @extend %ohLordCenterMyChildren;
   .char.bever {
@@ -56,11 +65,6 @@ $keuze--check-size: 30px;
       @include mobile {
         padding: 0.5em 0;
       }
-      li:ng-href {
-        outline: none;
-        -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
-        -webkit-tap-highlight-color: transparent;
-      }
     }
   }
 }
@@ -77,18 +81,23 @@ $keuze--check-size: 30px;
 }
 
 .keuze.image {
-  .check {
-    display: none;
-    position: absolute;
-    display: inline-block;
-    color: #2ecc71;
-    line-height: 2.2em;
-    @include size($keuze--check-size);
-    @include transform(rotateY(-180deg) translateX(50%));
-    background: #fff;
-    border-radius: 180px;
-    left: 50%;
+  button {
+    width: 95%;
+    margin-top: 3%;
   }
+  p.hulp {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    margin-top: 5%;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+  }
+}
+
+.keuze.image {
   li {
     float: left;
     margin: 1%;
@@ -96,6 +105,7 @@ $keuze--check-size: 30px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    position: relative;
     span {
       opacity: 0;
       background: #fff;
@@ -113,11 +123,32 @@ $keuze--check-size: 30px;
         margin: 1rem auto;
       }
     }
-    &.animation {
-      @include animation(image-flip $keuze--flip-length forwards);
-      .check {
-        display: block;
+    &.check {
+      &:before {
+        content: '';
+        background: rgba(255,255,255,0.6);
+        top: 0; left: 0;
+        @include size(100%);
+        position: absolute;
       }
+      &:after {
+        content: '✓';
+        background: $green;
+        @include size(80px);
+        font-size: 3rem;
+        line-height: 2em;
+        left: 50%;
+        top: 50%;
+        @include transform(translateX(-50%) translateY(-50%));
+        @include animation(check-slide 0.2s ease-in-out);
+        color: white;
+        position: absolute;
+        border-radius: 180px;
+      }
+    }
+    &.info {
+      @include animation(image-flip $keuze--flip-length forwards);
+      z-index: 99;
       span {
         opacity: 1;
         @include animation(slide-in $keuze--flip-length forwards);

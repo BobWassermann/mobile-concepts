@@ -11,6 +11,7 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
     $scope.state = $state;
 
     $scope.clicked = 0;
+    $scope.checkCounter = 0;
 
     $scope.goHome = function(){
       $scope.clicked = 0;
@@ -34,9 +35,27 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
       console.log('reset');
     };
 
-    $scope.addFlip = function(){
-      if(this.class !== 'animation'){
-        this.class = 'animation';
+    $scope.check = function(){
+      if(this.class !== 'check'){
+        this.class = 'check';
+        $scope.checkCounter++;
+      } else {
+        this.class = '';
+        $scope.checkCounter--;
+      }
+      if($scope.checkCounter >= 2) {
+        $scope.checkDone = true;
+      } else {
+        $scope.checkDone = false;
+      }
+    };
+
+    $scope.info = function(){
+      if(this.class !== 'info'){
+        this.class = 'info';
+      } else {
+        $scope.checkCounter--;
+        this.class = '';
       }
     };
 
@@ -50,6 +69,38 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
       restricht: 'AEC',
       replace: 'true',
       template: '<div class="tekstballon" ng-click="click()"><span>{{messages[0][1][clicked]}}</span></div>'
+    };
+  }).directive('onLongPress', function($timeout) {
+    return {
+      restrict: 'A',
+      link: function($scope, $elm, $attrs) {
+        $elm.bind('touchstart', function() {
+          // Locally scoped variable that will keep track of the long press
+          $scope.longPress = true;
+   
+          // We'll set a timeout for 600 ms for a long press
+          $timeout(function() {
+            if ($scope.longPress) {
+              // If the touchend event hasn't fired,
+              // apply the function given in on the element's on-long-press attribute
+              $scope.$apply(function() {
+                $scope.$eval($attrs.onLongPress);
+              });
+            }
+          }, 600);
+        });
+   
+        $elm.bind('touchend', function() {
+          // Prevent the onLongPress event from firing
+          $scope.longPress = false;
+          // If there is an on-touch-end function attached to this element, apply it
+          if ($attrs.onTouchEnd) {
+            $scope.$apply(function() {
+              $scope.$eval($attrs.onTouchEnd);
+            });
+          }
+        });
+      }
     };
   }).filter('removeSpacesThenLowercase', function () {
       return function (text) {

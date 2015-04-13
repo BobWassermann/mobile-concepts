@@ -53,6 +53,10 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
           'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' }
         }
       })
+      .state('worm.grondgraven', {
+        url: '/worm/grondgraven',
+        templateUrl: '/templates/worm-grondgraven.tpl.html'
+      })
 
       .state('tak', {
         url: '/tak',
@@ -85,6 +89,21 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
           '':                     { templateUrl: '/views/quest-bloem.html' },
           'keuzes@bloem':         { templateUrl: '/templates/keuze.tpl.html' }
         }
+      })
+
+      .state('bloem.vogelsspotten', {
+        url: '/bloem/vogelsspotten',
+        templateUrl: '/templates/bloem-vogelsspotten.tpl.html'
+      })
+
+      .state('bloem.poepinspecteren', {
+        url: '/bloem/poepinspecteren',
+        templateUrl: '/templates/bloem-poepinspecteren.tpl.html'
+      })
+
+      .state('bloem.paardenspotten', {
+        url: '/bloem/paardenspotten',
+        templateUrl: '/templates/bloem-paardenspotten.tpl.html'
       })
 
       .state('bever', {

@@ -5,15 +5,17 @@
 <div class="keuze image full animated bounceInRight" ng-show="clickDone">
   <h3>Welke beestjes heb je gevonden?</h3>
     <ul>
-      <li ng-mousedown="addFlip()"
+      <li ng-click="check()"
+          on-long-press="info()"
           ng-class="class"
           ng-repeat="i in kleinebeestjes"
           style="background-image: url(/images/opdrachten/bever/kleinebeestjes/{{i.name}}.jpg)">
-        <div class="check" ng-click="">✓</div>
         <span>
           <h1>{{i.name | capitalize}}</h1>
           <p>{{i.fact}}</p>
         </span>
       </li>
     </ul>
+    <button ng-show="checkDone">Verder</button>
+    <p class="hulp" ng-hide="checkDone">Tip: Houd je vinger lang ingedrukt op een plaatje voor een leuk weetje</p>
 </div>
