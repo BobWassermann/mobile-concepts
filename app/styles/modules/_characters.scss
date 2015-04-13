@@ -48,7 +48,7 @@ $characters: vogel worm bever tak bloem;
 }
 
 .char.bloem {
-  top: 80%;
+  top: 75%;
   right: 2%;
   z-index: 11;
   @include size($char--size*2);
@@ -68,7 +68,7 @@ $characters: vogel worm bever tak bloem;
 }
 
 .char.worm {
-  top: 94%;
+  top: 87%;
   left: 7%;
   z-index: 11;
   @include size($char--size*1.5);
