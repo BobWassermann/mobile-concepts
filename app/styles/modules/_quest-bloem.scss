@@ -14,5 +14,6 @@ section#bloem {
 
 section#bloem .tekstballon {
 	@include tekstballon(left);
-  left: $quest-bloem--bloem-size * 0.8;
+  left: $quest-bloem--bloem-size*0.8;
+  bottom: $quest-bloem--bloem-size/2.8;
 }
