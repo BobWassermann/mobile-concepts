@@ -59,7 +59,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         url: '/tak',
         controller: 'QuestTakCtrl',
         views: {
-          '':                     { templateUrl: '/views/quest-worm.html' },
+          '':                     { templateUrl: '/views/quest-tak.html' },
           'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' },
           'tekstballon@worm' :    { templateUrl: '/templates/tekstballon.tpl.html' }
         }
