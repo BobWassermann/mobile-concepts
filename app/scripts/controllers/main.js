@@ -14,6 +14,7 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
 
     $scope.goHome = function(){
       $scope.clicked = 0;
+      $scope.clickDone = false;
       $state.go('home');
       $scope.vogelHide = true;
     };
@@ -37,6 +38,13 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
       $state.go($previousState.get().state.name + '-2');
     };
 
+  }).directive('tekstballon', function(){
+    return {
+      scope: true,
+      restricht: 'AEC',
+      replace: 'true',
+      template: '<div class="tekstballon" ng-click="click()"><span>{{messages[0][1][clicked]}}</span></div>'
+    };
   }).filter('removeSpacesThenLowercase', function () {
       return function (text) {
       var str = text.replace(/\s+/g, '');

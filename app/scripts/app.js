@@ -50,8 +50,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         controller: 'QuestWormCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-worm.html' },
-          'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' },
-          'tekstballon@worm' :    { templateUrl: '/templates/tekstballon.tpl.html' }
+          'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' }
         }
       })
 
@@ -60,8 +59,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         controller: 'QuestTakCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-tak.html' },
-          'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' },
-          'tekstballon@worm' :    { templateUrl: '/templates/tekstballon.tpl.html' }
+          'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' }
         }
       })
 
@@ -70,8 +68,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         controller: 'QuestBloemCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-bloem.html' },
-          'keuzes@bloem':         { templateUrl: '/templates/keuze.tpl.html' },
-          'tekstballon@bloem' :   { templateUrl: '/templates/tekstballon.tpl.html' }
+          'keuzes@bloem':         { templateUrl: '/templates/keuze.tpl.html' }
         }
       })
 
@@ -80,8 +77,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         controller: 'QuestBeverCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-bever.html' },
-          'keuzes@bever':         { templateUrl: '/templates/keuze.tpl.html' },
-          'tekstballon@bever':    { templateUrl: '/templates/tekstballon.tpl.html' }
+          'keuzes@bever':         { templateUrl: '/templates/keuze.tpl.html' }
         }
       })
 

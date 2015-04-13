@@ -1,7 +1,7 @@
 <section id="tak" class="view" ng-controller="QuestTakCtrl">
   <div class="char tak"></div>
 
-  <div ui-view="tekstballon" ng-show="!clickDone"></div>
+  <div tekstballon ng-show="!clickDone"></div>
   <div ui-view="keuzes" ng-show="clickDone" class="fullscreen keuze-wrap"></div>
   <div ui-view></div>
 </section>
