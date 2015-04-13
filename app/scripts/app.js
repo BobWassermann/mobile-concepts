@@ -82,7 +82,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       })
 
       .state('bever.kleinebeestjes', {
-        url: '/kleinebeestjes',
+        url: '/bever/kleinebeestjes',
         templateUrl: '/templates/bever-kleinebeestjes.tpl.html',
         controller: function($scope){
           $scope.clicked = 0;
@@ -91,17 +91,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         }
       })
 
-      .state('bever-opdracht-degrotespeurtocht', {
+      .state('bever.degrotespeurtocht', {
         url: '/bever/degrotespeurtocht',
         templateUrl: '/templates/bever-degrotespeurtocht.tpl.html'
       })
 
-        .state('bever-opdracht-degrotespeurtocht-2', {
-          url: '/bever/degrotespeurtocht/2',
-          templateUrl: '/templates/bever-degrotespeurtocht-2.tpl.html'
-        })
-
-      .state('bever-opdracht-spullenverzamelen', {
+      .state('bever.spullenverzamelen', {
         url: '/bever/spullenverzamelen',
         templateUrl: '/templates/bever-spullenverzamelen.tpl.html'
       })
