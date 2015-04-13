@@ -1,6 +1,7 @@
 $mq--mobile-mini-max: 450px;
 $mq--mobile-max: 605px;
 $mq--tablet-max: 1024px;
+$mq--desktop-min: 1025px;
 
 @mixin mini-mobile {
   @media
@@ -19,6 +20,13 @@ $mq--tablet-max: 1024px;
 @mixin tablet {
   @media
     only screen and (max-width: $mq--tablet-max) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media
+    only screen and (min-width: $mq--desktop-min) {
     @content;
   }
 }
