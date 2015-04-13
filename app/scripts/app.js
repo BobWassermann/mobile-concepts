@@ -59,8 +59,23 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         controller: 'QuestTakCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-tak.html' },
-          'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' }
+          'keuzes@tak':          { templateUrl: '/templates/keuze.tpl.html' }
         }
+      })
+
+      .state('tak.aangespoeldetakken', {
+        url: '/tak/aangespoeldetakken',
+        templateUrl: '/templates/tak-aangespoeldetakken.tpl.html'
+      })
+
+      .state('tak.detaksi', {
+        url: '/bever/detaksi',
+        templateUrl: '/templates/tak-detaksi.tpl.html'
+      })
+
+      .state('tak.demooistetak', {
+        url: '/bever/demooistetak',
+        templateUrl: '/templates/tak-demooistetak.tpl.html'
       })
 
       .state('bloem', {
