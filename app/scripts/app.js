@@ -82,25 +82,21 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       })
 
       .state('bever.kleinebeestjes', {
-        url: '/kleinebeestjes',
+        url: '/bever/kleinebeestjes',
         templateUrl: '/templates/bever-kleinebeestjes.tpl.html',
         controller: function($scope){
+          $scope.clicked = 0;
           $scope.clickDone = false;
           document.querySelector('.fullscreen.keuze-wrap').style.display = 'none';
         }
       })
 
-      .state('bever-opdracht-degrotespeurtocht', {
+      .state('bever.degrotespeurtocht', {
         url: '/bever/degrotespeurtocht',
         templateUrl: '/templates/bever-degrotespeurtocht.tpl.html'
       })
 
-        .state('bever-opdracht-degrotespeurtocht-2', {
-          url: '/bever/degrotespeurtocht/2',
-          templateUrl: '/templates/bever-degrotespeurtocht-2.tpl.html'
-        })
-
-      .state('bever-opdracht-spullenverzamelen', {
+      .state('bever.spullenverzamelen', {
         url: '/bever/spullenverzamelen',
         templateUrl: '/templates/bever-spullenverzamelen.tpl.html'
       })
