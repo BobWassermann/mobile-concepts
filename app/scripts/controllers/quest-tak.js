@@ -12,37 +12,37 @@ angular.module('mobileConceptsApp')
     $scope.messages = [
       ['intro',
         [
-          'Hoi, ik ben Bob de Bolle Bever.',
-          'Ik speelde verstoppertje met mijn vriendjes, maar ze zijn er vandoor.',
-          'Kunnen jullie mij helpen mijn vriendjes terug te vinden?'
+          'Samen met mijn familie ben ik aangespoeld in dit gebied.',
+          'Wij vinden het leuk hier!',
+          'Misschien kunnen we elkaar nog iets bijleren over takken?!'
         ]
       ],
-      ['kleinebeestjes',
+      ['aangespoeldetakken',
         [
-          'Ga op zoek naar kleine beestjes.',
-          'Ze verschuilen zich graag op vochtige plekjes. Vang ze voorzichtig en bekijk ze heel goed!',
-          'Gebruik voor deze opdracht jullie loep.'
+          'Ga opzoek naar takken. Dik of juist dun, lang of kort, alles mag.  ',
+          'Waar denk je dat de tak vandaan komt, en waarom?',
+          'Bevers houden ook van takken, als je heel goed kijkt zie je de knaagsporen nog.'
         ]
       ],
-      ['degrotespeurtocht',
+      ['detaksi',
         [
-          'In de natuur laten de meeste dieren zich niet zo gemakkelijk zien.',
-          'We kunnen er wel achter komen waar het diertje zich verstopt heeft.',
-          'Ben jij een echte detective? Volg de sporen.'
+          'Wanneer mensen lange afstanden moeten afleggen nemen ze de taxi, een insect neemt "de taksi".',
+          'Kun jij taksi-takken vinden? Zo ja, welke insecten zitten op de taksi?',
+          'Gooi de taksi-takken maar in de Maas. Gooi zo ver als je kan. Zo kan de taksi weer verder!'
         ]
       ],
-      ['spullenverzamelen',
+      ['demooistetak',
         [
-          'Ik wil een huisje bouwen maar dat is veel werk en ik heb er vanalles voor nodig.',
-          'Willen jullie mij helpen met het verzamelen van deze spullen?',
-          'Je hebt wel een loep nodig!'
+          'Takken kun je vinden in allerlei soorten en maten.',
+          'Zoek een tak die jij het mooiste vindt en vertel de groep waarom je voor die tak gekozen hebt.',
+          'Als de tak kleiner is dan je arm, dan mag je hem mee naar huis nemen. Of je laat hem liggen. Aan jou de keus.'
         ]
       ]
     ];
     
     $scope.opdrachten = [
-      'Kleine beestjes',
-      'De grote speurtocht',
-      'Spullen verzamelen'
+      'Aangespoelde takken',
+      'De taksi',
+      'De mooiste tak'
     ];
   });

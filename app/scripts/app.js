@@ -53,14 +53,33 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
           'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' }
         }
       })
+      .state('worm.grondgraven', {
+        url: '/worm/grondgraven',
+        templateUrl: '/templates/worm-grondgraven.tpl.html'
+      })
 
       .state('tak', {
         url: '/tak',
         controller: 'QuestTakCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-tak.html' },
-          'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' }
+          'keuzes@tak':          { templateUrl: '/templates/keuze.tpl.html' }
         }
+      })
+
+      .state('tak.aangespoeldetakken', {
+        url: '/tak/aangespoeldetakken',
+        templateUrl: '/templates/tak-aangespoeldetakken.tpl.html'
+      })
+
+      .state('tak.detaksi', {
+        url: '/bever/detaksi',
+        templateUrl: '/templates/tak-detaksi.tpl.html'
+      })
+
+      .state('tak.demooistetak', {
+        url: '/bever/demooistetak',
+        templateUrl: '/templates/tak-demooistetak.tpl.html'
       })
 
       .state('bloem', {
@@ -70,6 +89,21 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
           '':                     { templateUrl: '/views/quest-bloem.html' },
           'keuzes@bloem':         { templateUrl: '/templates/keuze.tpl.html' }
         }
+      })
+
+      .state('bloem.vogelsspotten', {
+        url: '/bloem/vogelsspotten',
+        templateUrl: '/templates/bloem-vogelsspotten.tpl.html'
+      })
+
+      .state('bloem.poepinspecteren', {
+        url: '/bloem/poepinspecteren',
+        templateUrl: '/templates/bloem-poepinspecteren.tpl.html'
+      })
+
+      .state('bloem.paardenspotten', {
+        url: '/bloem/paardenspotten',
+        templateUrl: '/templates/bloem-paardenspotten.tpl.html'
       })
 
       .state('bever', {

@@ -12,16 +12,16 @@ angular.module('mobileConceptsApp')
     $scope.messages = [
       ['intro',
         [
-          'Hoi, ik ben Bob de Bolle Bever.',
-          'Ik speelde verstoppertje met mijn vriendjes, maar ze zijn er vandoor.',
-          'Kunnen jullie mij helpen mijn vriendjes terug te vinden?'
+          'Hallo, Ik ben Willem de Wijze Worm.',
+          'Mij vinden jullie onder de grond op vochtige plekjes!',
+          'Kunnen jullie mij helpen met wat opdrachten?.'
         ]
       ],
-      ['kleinebeestjes',
+      ['grondgraven',
         [
-          'Ga op zoek naar kleine beestjes.',
-          'Ze verschuilen zich graag op vochtige plekjes. Vang ze voorzichtig en bekijk ze heel goed!',
-          'Gebruik voor deze opdracht jullie loep.'
+          'Hey kameraad! Ik heb honger.',
+          'Wil jij me helpen om de lekkerste grond te vinden? Hiervoor moeten we de grond onderzoeken.',
+          'Gebruik voor deze opdracht een grondboor.'
         ]
       ],
       ['degrotespeurtocht',
@@ -41,7 +41,7 @@ angular.module('mobileConceptsApp')
     ];
     
     $scope.opdrachten = [
-      'Kleine beestjes',
+      'Grond Graven',
       'De grote speurtocht',
       'Spullen verzamelen'
     ];
