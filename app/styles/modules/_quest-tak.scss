@@ -4,10 +4,16 @@ section#tak {
 	background: center/cover url('/images/achtergrond-tak.png') no-repeat;
 	.char.tak {
 		top: calc(100% - #{$quest-tak--tak-size * 0.9});
-		left: 5%;
+		left: 4%;
 		@include size($quest-tak--tak-size);
 	}
 	.char.tak:after {
 		display: none;
 	}
+}
+
+section#tak .tekstballon {
+  @include tekstballon(left);
+		left: $quest-tak--tak-size*0.8;
+		bottom: $quest-tak--tak-size/2.8;
 }

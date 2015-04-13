@@ -11,3 +11,9 @@ section#worm {
 		display: none;
 	}
 }
+
+section#worm .tekstballon {
+  @include tekstballon(left);
+		left: $quest-worm--worm-size*.7;
+		bottom: $quest-worm--worm-size/2;
+}
