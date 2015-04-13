@@ -1,0 +1,10 @@
+button {
+  box-shadow: none;
+  border: none;
+  background: $yellow;
+  color: darken($yellow, 50);
+  font-size: 1.5rem;
+  font-family: $font--base;
+  border-radius: $border-radius--g;
+  padding: 0.5em 1em;
+}
