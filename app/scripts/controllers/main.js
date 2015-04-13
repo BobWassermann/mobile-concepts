@@ -28,6 +28,12 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
       }
     };
 
+    $scope.reset = function(){
+      $scope.clicked = 0;
+      $scope.clickDone = false;
+      console.log('reset');
+    };
+
     $scope.addFlip = function(){
       if(this.class !== 'animation'){
         this.class = 'animation';

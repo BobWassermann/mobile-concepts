@@ -1,6 +1,6 @@
 <div class="keuze animated rubberBand">
   <h3>Met welke klusjes willen jullie helpen?</h3>
     <ul>
-      <li ng-repeat="i in opdrachten" ui-sref=".{{i | removeSpacesThenLowercase}}">{{i}}</li>
+      <li ng-repeat="i in opdrachten" ui-sref=".{{i | removeSpacesThenLowercase}}" ng-click="reset()">{{i}}</li>
     </ul>
 </div>
