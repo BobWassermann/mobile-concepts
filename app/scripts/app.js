@@ -84,9 +84,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       .state('bever.kleinebeestjes', {
         url: '/bever/kleinebeestjes',
         templateUrl: '/templates/bever-kleinebeestjes.tpl.html',
-        controller: function($scope){
-          $scope.clicked = 0;
-          $scope.clickDone = false;
+        controller: function(){
           document.querySelector('.fullscreen.keuze-wrap').style.display = 'none';
         }
       })
@@ -99,15 +97,5 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       .state('bever.spullenverzamelen', {
         url: '/bever/spullenverzamelen',
         templateUrl: '/templates/bever-spullenverzamelen.tpl.html'
-      })
-
-        .state('bever-opdracht-spullenverzamelen-2', {
-          url: '/bever/spullenverzamelen/2',
-          templateUrl: '/templates/bever-spullenverzamelen-2.tpl.html'
-        })
-
-      .state('bever-opdracht-keuzes', {
-        url: '/bever/opdracht/keuzes',
-        templateUrl: '/templates/bever-keuze-opdracht.tpl.html'
       });
 });
