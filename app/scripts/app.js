@@ -110,26 +110,52 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         url: '/bever',
         controller: 'QuestBeverCtrl',
         views: {
-          '':                     { templateUrl: '/views/quest-bever.html' },
-          'keuzes@bever':         { templateUrl: '/templates/keuze.tpl.html' }
+          '':                   { templateUrl: '/views/quest-bever.html' },
+          'tekstballon@bever':  { templateUrl: '/templates/tekstballon.tpl.html' }
+        },
+        data: {
+          stateNumber: 0,
+          option: 'state',
+          value: '.keuzes'
         }
+      })
+
+      .state('bever.keuzes', {
+        url: '/keuzes',
+        templateUrl: '/templates/keuze.tpl.html'
       })
 
       .state('bever.kleinebeestjes', {
         url: '/kleinebeestjes',
         templateUrl: '/templates/bever-kleinebeestjes.tpl.html',
-        controller: function(){
-          document.querySelector('.fullscreen.keuze-wrap').style.display = 'none';
+        data: {
+          stateNumber: 1,
+          option: 'statement',
+          value: '$scope.clickDone = true'
+        }
+      })
+
+      .state('bever.kleinebeestjes.1', {
+        url: '/kleinebeestjes/1',
+        templateUrl: '/templates/bever-kleinebeestes.tpl.html',
+        controller: function($scope){
+          $scope.tekstballonDone = true;
         }
       })
 
       .state('bever.degrotespeurtocht', {
         url: '/degrotespeurtocht',
-        templateUrl: '/templates/bever-degrotespeurtocht.tpl.html'
+        templateUrl: '/templates/bever-degrotespeurtocht.tpl.html',
+        data: {
+          stateNumber: 2
+        }
       })
 
       .state('bever.spullenverzamelen', {
         url: '/bever/spullenverzamelen',
-        templateUrl: '/templates/bever-spullenverzamelen.tpl.html'
+        templateUrl: '/templates/bever-spullenverzamelen.tpl.html',
+        data: {
+          stateNumber: 3
+        }
       });
 });
