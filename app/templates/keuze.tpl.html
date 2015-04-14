@@ -1,6 +1,8 @@
-<div class="keuze animated rubberBand">
-  <h3>Met welke klusjes willen jullie helpen?</h3>
-    <ul>
-      <li ng-repeat="i in opdrachten" ui-sref=".{{i | removeSpacesThenLowercase}}" ng-click="reset()">{{i}}</li>
-    </ul>
+<div class="fullscreen keuze-wrap">
+  <div class="keuze animated rubberBand">
+    <h3>Met welke klusjes willen jullie helpen?</h3>
+      <ul>
+        <li ng-repeat="i in opdrachten" ng-click="resetAndGo('bever.{{i | removeSpacesThenLowercase}}')">{{i}}</li>
+      </ul>
+  </div>
 </div>

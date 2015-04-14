@@ -110,16 +110,22 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         url: '/bever',
         controller: 'QuestBeverCtrl',
         views: {
-          '':                     { templateUrl: '/views/quest-bever.html' },
-          'keuzes@bever':         { templateUrl: '/templates/keuze.tpl.html' }
+          '':                   { templateUrl: '/views/quest-bever.html' },
+          'tekstballon@bever':  { templateUrl: '/templates/tekstballon.tpl.html' }
         }
+      })
+
+      .state('bever.keuzes', {
+        url: '/keuzes',
+        templateUrl: '/templates/keuze.tpl.html'
       })
 
       .state('bever.kleinebeestjes', {
         url: '/kleinebeestjes',
         templateUrl: '/templates/bever-kleinebeestjes.tpl.html',
-        controller: function(){
-          document.querySelector('.fullscreen.keuze-wrap').style.display = 'none';
+        controller: function($scope) {
+          $scope.stateNumber = 1;
+          $scope.nextState = ''
         }
       })
 

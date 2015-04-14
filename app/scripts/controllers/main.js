@@ -12,6 +12,13 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
 
     $scope.clicked = 0;
     $scope.checkCounter = 0;
+    $scope.stateNumber = 0;
+    $scope.nextState = '.keuzes';
+
+    if($state.includes('bever.kleinebeestjes')) {
+      $scope.stateNumber = 1;
+      $scope.nextState = ''
+    }
 
     $scope.goHome = function(){
       $scope.clicked = 0;
@@ -20,19 +27,21 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
       $scope.vogelHide = true;
     };
 
-    $scope.click = function(){
+    $scope.click = function($go){
       var len = 1;
       if($scope.clicked <= len) {
         $scope.clicked++;
       } else {
+        $state.go($go);
         $scope.clickDone = true;
       }
     };
 
-    $scope.reset = function(){
+    $scope.resetAndGo = function($go){
       $scope.clicked = 0;
       $scope.clickDone = false;
       console.log('reset');
+      $state.go($go);
     };
 
     $scope.check = function(){
@@ -63,13 +72,6 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
       $state.go($previousState.get().state.name + '-2');
     };
 
-  }).directive('tekstballon', function(){
-    return {
-      scope: true,
-      restricht: 'AEC',
-      replace: 'true',
-      template: '<div class="tekstballon" ng-click="click()"><span>{{messages[0][1][clicked]}}</span></div>'
-    };
   }).directive('onLongPress', function($timeout) {
     return {
       restrict: 'A',
