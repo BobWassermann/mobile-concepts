@@ -13,12 +13,6 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
     $scope.clicked = 0;
     $scope.checkCounter = 0;
     $scope.stateNumber = 0;
-    $scope.nextState = '.keuzes';
-
-    if($state.includes('bever.kleinebeestjes')) {
-      $scope.stateNumber = 1;
-      $scope.nextState = ''
-    }
 
     $scope.goHome = function(){
       $scope.clicked = 0;
@@ -27,13 +21,20 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
       $scope.vogelHide = true;
     };
 
-    $scope.click = function($go){
+    $scope.click = function($option, $val){
       var len = 1;
       if($scope.clicked <= len) {
         $scope.clicked++;
       } else {
-        $state.go($go);
         $scope.clickDone = true;
+        if($option === 'state') {
+          $state.go($val);
+        } else if ($option === 'statement') {
+          console.log($val);
+          return $val;
+        } else {
+          console.log('nada');
+        }
       }
     };
 
