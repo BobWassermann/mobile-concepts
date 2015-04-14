@@ -21,7 +21,7 @@ angular.module('mobileConceptsApp')
         [
           'Ga opzoek naar takken. Dik of juist dun, lang of kort, alles mag.  ',
           'Waar denk je dat de tak vandaan komt, en waarom?',
-          'Bevers houden ook van takken, als je heel goed kijkt zie je de knaagsporen nog.'
+          'Klik op de afbeeldingen hierboven en ontdek meer over de aangespoelde takken.'
         ]
       ],
       ['detaksi',
