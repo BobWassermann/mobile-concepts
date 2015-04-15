@@ -45,67 +45,91 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         templateUrl: '/views/main.html'
       })
 
+      // Worm
       .state('worm', {
         url: '/worm',
         controller: 'QuestWormCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-worm.html' },
-          'keuzes@worm':          { templateUrl: '/templates/keuze.tpl.html' }
+          'tekstballon@worm':     { templateUrl: '/templates/tekstballon.tpl.html' }
+        },
+        data: {
+          stateNumber: 0,
+          option: 'state',
+          value: '.keuzes'
         }
       })
-      .state('worm.grondgraven', {
-        url: '/worm/grondgraven',
-        templateUrl: '/templates/worm-grondgraven.tpl.html'
-      })
+        .state('worm.keuzes', {
+          url: '/keuzes',
+          templateUrl: '/templates/keuze.tpl.html'
+        })
+        .state('worm.grondgraven', {
+          url: '/worm/grondgraven',
+          templateUrl: '/templates/worm-grondgraven.tpl.html'
+        })
 
+
+      // Tak
       .state('tak', {
         url: '/tak',
         controller: 'QuestTakCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-tak.html' },
-          'keuzes@tak':          { templateUrl: '/templates/keuze.tpl.html' }
+          'tekstballon@tak':          { templateUrl: '/templates/tekstballon.tpl.html' }
+        },
+        data: {
+          stateNumber: 0,
+          option: 'state',
+          value: '.keuzes'
         }
       })
+        .state('tak.aangespoeldetakken', {
+          url: '/tak/aangespoeldetakken',
+          templateUrl: '/templates/tak-aangespoeldetakken.tpl.html'
+        })
+        .state('tak.detaksi', {
+          url: '/bever/detaksi',
+          templateUrl: '/templates/tak-detaksi.tpl.html'
+        })
+        .state('tak.demooistetak', {
+          url: '/bever/demooistetak',
+          templateUrl: '/templates/tak-demooistetak.tpl.html'
+        })
 
-      .state('tak.aangespoeldetakken', {
-        url: '/tak/aangespoeldetakken',
-        templateUrl: '/templates/tak-aangespoeldetakken.tpl.html'
-      })
 
-      .state('tak.detaksi', {
-        url: '/bever/detaksi',
-        templateUrl: '/templates/tak-detaksi.tpl.html'
-      })
-
-      .state('tak.demooistetak', {
-        url: '/bever/demooistetak',
-        templateUrl: '/templates/tak-demooistetak.tpl.html'
-      })
-
+      // Bloem
       .state('bloem', {
         url: '/bloem',
         controller: 'QuestBloemCtrl',
         views: {
           '':                     { templateUrl: '/views/quest-bloem.html' },
-          'keuzes@bloem':         { templateUrl: '/templates/keuze.tpl.html' }
+          'tekstballon@bloem':    { templateUrl: '/templates/tekstballon.tpl.html' }
+        },
+        data: {
+          stateNumber: 0,
+          option: 'state',
+          value: '.keuzes'
         }
       })
+        .state('bloem.keuzes', {
+          url: '/keuzes',
+          templateUrl: '/templates/keuze.tpl.html'
+        })
+        .state('bloem.vogelsspotten', {
+          url: '/bloem/vogelsspotten',
+          templateUrl: '/templates/bloem-vogelsspotten.tpl.html'
+        })
+        .state('bloem.poepinspecteren', {
+          url: '/bloem/poepinspecteren',
+          templateUrl: '/templates/bloem-poepinspecteren.tpl.html'
+        })
+        .state('bloem.paardenspotten', {
+          url: '/bloem/paardenspotten',
+          templateUrl: '/templates/bloem-paardenspotten.tpl.html'
+        })
 
-      .state('bloem.vogelsspotten', {
-        url: '/bloem/vogelsspotten',
-        templateUrl: '/templates/bloem-vogelsspotten.tpl.html'
-      })
 
-      .state('bloem.poepinspecteren', {
-        url: '/bloem/poepinspecteren',
-        templateUrl: '/templates/bloem-poepinspecteren.tpl.html'
-      })
-
-      .state('bloem.paardenspotten', {
-        url: '/bloem/paardenspotten',
-        templateUrl: '/templates/bloem-paardenspotten.tpl.html'
-      })
-
+      // Bever
       .state('bever', {
         url: '/bever',
         controller: 'QuestBeverCtrl',
@@ -119,43 +143,38 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
           value: '.keuzes'
         }
       })
-
-      .state('bever.keuzes', {
-        url: '/keuzes',
-        templateUrl: '/templates/keuze.tpl.html'
-      })
-
-      .state('bever.kleinebeestjes', {
-        url: '/kleinebeestjes',
-        templateUrl: '/templates/bever-kleinebeestjes.tpl.html',
-        data: {
-          stateNumber: 1,
-          option: 'statement',
-          value: '$scope.clickDone = true'
-        }
-      })
-
-      .state('bever.kleinebeestjes.1', {
-        url: '/kleinebeestjes/1',
-        templateUrl: '/templates/bever-kleinebeestes.tpl.html',
-        controller: function($scope){
-          $scope.tekstballonDone = true;
-        }
-      })
-
-      .state('bever.degrotespeurtocht', {
-        url: '/degrotespeurtocht',
-        templateUrl: '/templates/bever-degrotespeurtocht.tpl.html',
-        data: {
-          stateNumber: 2
-        }
-      })
-
-      .state('bever.spullenverzamelen', {
-        url: '/bever/spullenverzamelen',
-        templateUrl: '/templates/bever-spullenverzamelen.tpl.html',
-        data: {
-          stateNumber: 3
-        }
-      });
+        .state('bever.keuzes', {
+          url: '/keuzes',
+          templateUrl: '/templates/keuze.tpl.html'
+        })
+        .state('bever.kleinebeestjes', {
+          url: '/kleinebeestjes',
+          templateUrl: '/templates/bever-kleinebeestjes.tpl.html',
+          data: {
+            stateNumber: 1,
+            option: 'statement',
+            value: '$scope.clickDone = true'
+          }
+        })
+        .state('bever.kleinebeestjes.1', {
+          url: '/kleinebeestjes/1',
+          templateUrl: '/templates/bever-kleinebeestes.tpl.html',
+          controller: function($scope){
+            $scope.tekstballonDone = true;
+          }
+        })
+        .state('bever.degrotespeurtocht', {
+          url: '/degrotespeurtocht',
+          templateUrl: '/templates/bever-degrotespeurtocht.tpl.html',
+          data: {
+            stateNumber: 2
+          }
+        })
+        .state('bever.spullenverzamelen', {
+          url: '/bever/spullenverzamelen',
+          templateUrl: '/templates/bever-spullenverzamelen.tpl.html',
+          data: {
+            stateNumber: 3
+          }
+        });
 });

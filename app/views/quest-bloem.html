@@ -1,7 +1,7 @@
 <section id="bloem" class="view" ng-controller="QuestBloemCtrl">
   <div class="char bloem"></div>
-
-  <div tekstballon ng-show="!clickDone"></div>
-  <div ui-view="keuzes" ng-show="clickDone" class="fullscreen keuze-wrap"></div>
+  
+  <div ui-view="tekstballon" ng-hide="clickDone"></div>
   <div ui-view></div>
+
 </section>

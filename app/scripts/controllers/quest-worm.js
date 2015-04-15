@@ -14,7 +14,7 @@ angular.module('mobileConceptsApp')
         [
           'Hallo, Ik ben Willem de Wijze Worm.',
           'Mij vinden jullie onder de grond op vochtige plekjes!',
-          'Kunnen jullie mij helpen met wat opdrachten?.'
+          'Kunnen jullie mij helpen met wat opdrachten?'
         ]
       ],
       ['grondgraven',
