@@ -13,6 +13,7 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
     $scope.clicked = 0;
     $scope.checkCounter = 0;
     $scope.stateNumber = 0;
+    $scope.counterValue = 0;
 
     $scope.goHome = function(){
       $scope.clicked = 0;

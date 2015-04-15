@@ -72,4 +72,46 @@ angular.module('mobileConceptsApp')
         fact: 'Bij het trillen van de bodem kruipen de regenwormen uit de grond, dit kan door de loopbewegingen van dieren worden veroorzaakt of door menselijk handelen zoals met behulp van een stok of greep.'
       }
     ];
+
+    $scope.degrotespeurtocht = [
+      {
+        name: 'huisje'
+      },
+      {
+        name: 'knaagspoor'
+      },
+      {
+        name: 'lichaamsdelen'
+      },
+      {
+        name: 'poep'
+      },
+      {
+        name: 'pootafdruk'
+      },
+      {
+        name: 'voetspoor-mens'
+      }
+    ];
+
+    $scope.spullenverzamelenTakken = [
+      {
+        name: 'berk'
+      },
+      {
+        name: 'beuk'
+      },
+      {
+        name: 'eik'
+      },
+      {
+        name: 'els'
+      },
+      {
+        name: 'esdoorn'
+      },
+      {
+        name: 'wilg'
+      }
+    ];
 });

@@ -1,0 +1,61 @@
+$counterValue--size: 250px;
+$counterButtonSmall--size: 120px;
+
+@include keyframes(counterValue) {
+  0% {
+    @include transform(translateX(-50%) translateY(-80%) scale(0.5));
+  }
+  100% {
+    @include transform(translateX(-50%) translateY(0) scale(1));
+  }
+}
+
+@include keyframes(counterButtonSmall) {
+  0% {
+    @include transform(translateY(-80%) scale(0.5));
+  }
+  100% {
+    @include transform(translateY(-50%) scale(1));
+  }
+}
+
+.counter {
+  position: relative;
+  top: 15%;
+
+  .min, .plus {
+    @include animation(counterButtonSmall 1.5s forwards);
+    position: absolute;
+    font-size: 4rem;
+    line-height: 1.8em;
+    @include size($counterButtonSmall--size);
+    top: 50%;
+    @include transform(translateY(-50%));
+    z-index: 3;
+    @include transition(0.5s);
+    &:active {
+      background: #D6D8D7;
+    }
+  }
+  
+  .min { left: $counterButtonSmall--size/2 }
+  .plus { right: $counterButtonSmall--size/2 }
+  
+  .min, .plus, .counterValue {
+    background: #fff;
+    color: $orange;
+    border-radius: 180px;
+    border: 1px solid $orange;
+  }
+  
+  .counterValue {
+    @include animation(counterValue 1.5s forwards);
+    @include size($counterValue--size);
+    font-size: 7rem;
+    line-height: 2.4em;
+    position: relative;
+    left: 50%;
+    z-index: 5;
+    @include transform(translateX(-50%));
+  }
+}

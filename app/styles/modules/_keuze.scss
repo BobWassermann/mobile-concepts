@@ -82,8 +82,10 @@ $keuze--check-size: 30px;
 
 .keuze.image {
   button {
-    width: 95%;
-    margin-top: 3%;
+    width: 86%;
+    position: absolute;
+    bottom: 3%;
+    left: 8%;
   }
   p.hulp {
     width: 80%;
@@ -94,13 +96,18 @@ $keuze--check-size: 30px;
     display: inline-block;
     font-size: 1.5rem;
     line-height: 1.2em;
+    &.absolute {
+      position: absolute;
+      bottom: 12%;
+      margin: 0;
+    }
   }
 }
 
 .keuze.image {
   li {
     float: left;
-    margin: 1%;
+    margin: 1% 1.5%;
     @include size(30% 30vh);
     background-size: cover;
     background-position: center;
@@ -122,6 +129,18 @@ $keuze--check-size: 30px;
         width: 80%;
         margin: 1rem auto;
       }
+    }
+    p {
+      @include animation(slide-in 1s);
+      position: absolute;
+      left: 0;
+      margin: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      width: 100%;
+      font-size: 1.2rem;
+      padding: 1em 0;
+      color: white;
     }
     &.check {
       &:before {

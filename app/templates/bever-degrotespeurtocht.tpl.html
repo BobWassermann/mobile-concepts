@@ -3,17 +3,13 @@
 </div>
 
 <div class="keuze image full animated bounceInRight" ng-show="clickDone && !opdrachtDone">
-  <h3>Welke beestjes heb je gevonden?</h3>
+  <h3>Welke sporen hebben jullie gevonden?</h3>
     <ul>
       <li ng-click="check()"
-          on-long-press="info()"
           ng-class="class"
-          ng-repeat="i in kleinebeestjes"
-          style="background-image: url(/images/opdrachten/bever/kleinebeestjes/{{i.name}}.jpg)">
-        <span>
-          <h1>{{i.name | capitalize}}</h1>
-          <p>{{i.fact}}</p>
-        </span>
+          ng-repeat="i in degrotespeurtocht"
+          style="background-image: url(/images/opdrachten/bever/degrotespeurtocht/{{i.name}}.jpg)">
+        <p>{{i.name | capitalize}}</p>
       </li>
     </ul>
     <button ng-show="checkDone" ng-click="opdrachtDone = true">Verder</button>
@@ -21,5 +17,5 @@
 </div>
 
 <div class="tekstballon bever" ng-show="opdrachtDone" ui-sref="home">
-  <span>Leuk dat jullie mij geholpen hebben kleine beestjes te vinden. Willen jullie mij helpen met nog een opdracht?</span>
+  <span>Leuk dat jullie mij geholpen hebben sporen te vinden. Willen jullie mij helpen met nog een opdracht?</span>
 </div>

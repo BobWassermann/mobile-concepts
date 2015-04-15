@@ -1,3 +1,30 @@
 <div class="tekstballon bever" ng-click="click()" ng-show="!clickDone">
   <span>{{messages[3][1][clicked]}}</span>
 </div>
+
+<div class="keuze image full animated bounceInRight" ng-show="clickDone && !opdrachtDone && !takkensoorten">
+  <h3>Zoek 10 takken</h3>
+    
+    <div class="counter">
+      <span class="min" ng-hide="counterValue <= 0" on-long-press="counterValue = counterValue - 1">-</span>
+        <div class="counterValue">{{counterValue}}</div>
+      <span class="plus" ng-hide="counterValue >= 10" on-long-press="counterValue = counterValue + 1">+</span>
+    </div>
+    
+    <p class="hulp absolute" ng-show="counterValue >= 10">Super! Maar ik voel een koude rilling op mijn rug, ik ben namelijk allergisch voor wilgentakken. Zit er een wilgentak tussen?</p>
+    <button ng-show="counterValue >= 10" ng-click="takkensoorten = true">Zoek de wilgentak</button>
+</div>
+
+<div class="keuze image full animated bounceInRight" ng-show="takkensoorten">
+  <h3>Hier zien jullie enkele takken</h3>
+    <ul>
+      <li ng-click="check()"
+          ng-class="class"
+          ng-repeat="i in spullenverzamelenTakken"
+          style="background-image: url(/images/opdrachten/bever/spullenverzamelen/takken/{{i.name}}.jpg)">
+          <p>{{i.name | capitalize}}</p>
+      </li>
+    </ul>
+    <button ng-show="checkDone" ng-click="opdrachtDone = true">Verder</button>
+    <p class="hulp" ng-hide="checkDone">Tik op de takken die jullie gevonden hebben. Haal de wilgentak ertussenuit.</p>
+</div>
