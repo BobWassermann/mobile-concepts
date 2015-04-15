@@ -45,5 +45,20 @@ angular.module('mobileConceptsApp')
       'De grote speurtocht',
       'Spullen verzamelen'
     ];
+
+    $scope.grondgraven = [
+      {
+        option: 'optie 1',
+        value: 'false'
+      },
+      {
+        option: 'optie 2',
+        value: 'true'
+      },
+      {
+        option: 'optie 3',
+        value: 'false'
+      }
+    ];    
     
   });

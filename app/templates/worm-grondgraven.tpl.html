@@ -1,3 +1,20 @@
-<div class="tekstballon worm" ng-click="click()" ng-show="!clickDone">
-  <span>{{messages[1][1][clicked]}}</span>
+<div class="keuze image full animated bounceInRight" ng-show="clickDone && !opdrachtDone">
+  <h3>Opties</h3>
+    <form class="radio">
+      <label ng-repeat="i in grondgraven">
+        <input type="radio" name="grondgraven" ng-model="grondgraven.value" value="{{i.value}}">
+          {{i.option}}
+      </label>
+    </form>
+    <button ng-show="grondgraven.value" ng-click="optie = true">Verder</button>
+</div>
+
+<div class="keuze image full animated bounceInRight" ng-show="optie">
+  <h3>Hier zien jullie enkele takken</h3>
+    <p ng-show="grondgraven.value === 'true'">juist!</p>
+    <p ng-show="grondgraven.value === 'false'">helaas!</p>
+    
+    <button ng-show="grondgraven.value === 'false'" ng-click="optie = false">← Terug</button>
+    <button ng-show="grondgraven.value === 'true'" ng-click="opdrachtAf()">Verder</button>
+    
 </div>
