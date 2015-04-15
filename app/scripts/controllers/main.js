@@ -14,6 +14,7 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
     $scope.checkCounter = 0;
     $scope.stateNumber = 0;
     $scope.counterValue = 0;
+    $scope.opdrachtenDone = [];
 
     $scope.goHome = function(){
       $scope.clicked = 0;
@@ -68,6 +69,14 @@ angular.module('mobileConceptsApp').controller('MainCtrl', function ($scope, $st
         $scope.checkCounter--;
         this.class = '';
       }
+    };
+
+    $scope.opdrachtAf = function(){
+      $scope.opdrachtDone = false;
+      var stateGo = $state.current.name;
+      $state.go(stateGo.split('.')[0] + '.keuzes'); 
+      $scope.opdrachtenDone.push(stateGo);
+      console.log($scope.opdrachtenDone);
     };
 
     $scope.goPrevious = function(){
