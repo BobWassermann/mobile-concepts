@@ -93,8 +93,21 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         })
         .state('tak.detaksi', {
           url: '/bever/detaksi',
-          templateUrl: '/templates/tak-detaksi.tpl.html'
+          templateUrl: '/templates/tak-detaksi.tpl.html',
+          data: {
+            stateNumber: 1,
+            option: 'statement',
+            value: '$scope.clickDone = true'
+          }
         })
+        .state('tak.detaksi.1', {
+          url: '/detaksi/1',
+          templateUrl: '/templates/tak-detaksi.tpl.html',
+          controller: function($scope){
+            $scope.tekstballonDone = true;
+          }
+        })
+
         .state('tak.demooistetak', {
           url: '/bever/demooistetak',
           templateUrl: '/templates/tak-demooistetak.tpl.html'
