@@ -63,6 +63,10 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
           url: '/keuzes',
           templateUrl: '/templates/worm-keuze.tpl.html'
         })
+        .state('worm.stenenspeurtocht', {
+          url: '/worm/stenenspeurtocht',
+          templateUrl: '/templates/worm-stenenspeurtocht.tpl.html'
+        })
         .state('worm.grondgraven', {
           url: '/worm/grondgraven',
           templateUrl: '/templates/worm-grondgraven.tpl.html'
