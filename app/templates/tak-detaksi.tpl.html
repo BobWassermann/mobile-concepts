@@ -1,3 +1,25 @@
 <div class="tekstballon tak" ng-click="click()" ng-show="!clickDone">
   <span>{{messages[2][1][clicked]}}</span>
 </div>
+
+<div class="keuze image full animated bounceInRight" ng-show="clickDone && !opdrachtDone">
+  <h3>Welke beestjes heb je op de taksi gevonden?</h3>
+    <ul>
+      <li ng-click="check()"
+          on-long-press="info()"
+          ng-class="class"
+          ng-repeat="i in detaksi"
+          style="background-image: url(/images/opdrachten/tak/detaksi/{{i.name}}.jpg)">
+        <span>
+          <h1>{{i.name | capitalize}}</h1>
+          <p>{{i.fact}}</p>
+        </span>
+      </li>
+    </ul>
+    <button ng-show="checkDone" ng-click="opdrachtDone = true">Verder</button>
+    <p class="hulp" ng-hide="checkDone">Tip: Houd je vinger lang ingedrukt op een plaatje voor een leuk weetje</p>
+</div>
+
+<div class="tekstballon tak" ng-show="opdrachtDone" ui-sref="home">
+  <span>Leuk dat jullie mij geholpen hebben kleine beestjes te vinden. Willen jullie mij helpen met nog een opdracht?</span>
+</div>
