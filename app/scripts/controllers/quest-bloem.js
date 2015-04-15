@@ -45,4 +45,28 @@ angular.module('mobileConceptsApp')
       'Poep Inspecteren',
       'Paarden Spotten'
     ];
+
+    $scope.vogelsspotten = [
+      {
+        name: 'buizert'
+      },
+      {
+        name: 'duif'
+      },
+      {
+        name: 'koolmees'
+      },
+      {
+        name: 'meeuw'
+      }
+    ];
+
+    $scope.poepinspecteren = [
+      {
+        name: 'galloway'
+      },
+      {
+        name: 'konikpaard'
+      }
+    ];
   });

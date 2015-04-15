@@ -61,7 +61,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       })
         .state('worm.keuzes', {
           url: '/keuzes',
-          templateUrl: '/templates/keuze.tpl.html'
+          templateUrl: '/templates/worm-keuze.tpl.html'
         })
         .state('worm.grondgraven', {
           url: '/worm/grondgraven',
@@ -83,6 +83,10 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
           value: '.keuzes'
         }
       })
+        .state('tak.keuzes', {
+          url: '/keuzes',
+          templateUrl: '/templates/tak-keuze.tpl.html'
+        })
         .state('tak.aangespoeldetakken', {
           url: '/tak/aangespoeldetakken',
           templateUrl: '/templates/tak-aangespoeldetakken.tpl.html'
@@ -113,7 +117,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       })
         .state('bloem.keuzes', {
           url: '/keuzes',
-          templateUrl: '/templates/keuze.tpl.html'
+          templateUrl: '/templates/bloem-keuze.tpl.html'
         })
         .state('bloem.vogelsspotten', {
           url: '/bloem/vogelsspotten',
@@ -145,7 +149,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
       })
         .state('bever.keuzes', {
           url: '/keuzes',
-          templateUrl: '/templates/keuze.tpl.html'
+          templateUrl: '/templates/bever-keuze.tpl.html'
         })
         .state('bever.kleinebeestjes', {
           url: '/kleinebeestjes',

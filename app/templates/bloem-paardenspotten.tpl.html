@@ -1,3 +1,19 @@
 <div class="tekstballon bloem" ng-click="click()" ng-show="!clickDone">
   <span>{{messages[3][1][clicked]}}</span>
 </div>
+
+<div class="keuze image full animated bounceInRight" ng-show="clickDone && !opdrachtDone && !takkensoorten">
+  <h3>Hoe veel paarden kunnen jullie vinden?</h3>
+    
+    <div class="counter">
+      <span class="min" ng-hide="counterValue <= 0" on-long-press="counterValue = counterValue - 1">-</span>
+        <div class="counterValue">{{counterValue}}</div>
+      <span class="plus" ng-hide="counterValue >= 10" on-long-press="counterValue = counterValue + 1">+</span>
+    </div>
+    
+    <button ng-show="checkDone" ng-click="opdrachtDone = true">Verder</button>
+</div>
+
+<div class="tekstballon bloem" ng-show="opdrachtDone" ui-sref="home">
+  <span>Leuk dat jullie mij geholpen hebben kleine beestjes te vinden. Willen jullie mij helpen met nog een opdracht?</span>
+</div>
