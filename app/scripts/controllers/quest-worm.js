@@ -24,11 +24,11 @@ angular.module('mobileConceptsApp')
           'Gebruik voor deze opdracht een grondboor.'
         ]
       ],
-      ['degrotespeurtocht',
+      ['stenenspeurtocht',
         [
-          'In de natuur laten de meeste dieren zich niet zo gemakkelijk zien.',
-          'We kunnen er wel achter komen waar het diertje zich verstopt heeft.',
-          'Ben jij een echte detective? Volg de sporen.'
+          'In dit gebied liggen veel verschillende stenen.',
+          'Ze hebben allemaal andere kleuren en formaten.',
+          'Willen jullie eens zoeken hoe veel verschillende stenen jullie kunnen vinden?'
         ]
       ],
       ['spullenverzamelen',
@@ -42,8 +42,29 @@ angular.module('mobileConceptsApp')
     
     $scope.opdrachten = [
       'Grond Graven',
-      'De grote speurtocht',
+      'Stenenspeurtocht',
       'Spullen verzamelen'
     ];
-    
+
+    $scope.stenenspeurtocht = [
+      {
+        name: 'baksteen',
+      },
+      {
+        name: 'kalksteen',
+      },
+      {
+        name: 'maaskei',
+      },
+      {
+        name: 'mergel',
+      },
+      {
+        name: 'vuursteen',
+      },
+      {
+        name: 'zandsteen',
+      }
+    ];
+
   });
