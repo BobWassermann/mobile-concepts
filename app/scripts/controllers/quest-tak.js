@@ -19,7 +19,7 @@ angular.module('mobileConceptsApp')
       ],
       ['aangespoeldetakken',
         [
-          'Ga opzoek naar takken. Dik of juist dun, lang of kort, alles mag.  ',
+          'Ga op zoek naar takken. Dik of juist dun, lang of kort, alles mag.  ',
           'Waar denk je dat de tak vandaan komt, en waarom?',
           'Klik op de afbeeldingen hierboven en ontdek meer over de aangespoelde takken.'
         ]
@@ -27,8 +27,8 @@ angular.module('mobileConceptsApp')
       ['detaksi',
         [
           'Wanneer mensen lange afstanden moeten afleggen nemen ze de taxi, een insect neemt "de taksi".',
-          'Kun jij taksi-takken vinden? Zo ja, welke insecten zitten op de taksi?',
-          'Gooi de taksi-takken maar in de Maas. Gooi zo ver als je kan. Zo kan de taksi weer verder!'
+          'Op deze manier kunnen ze afstanden afleggen die anders onmogelijk zijn voor kleine beestjes.',
+          'Laten we op zoek gaan naar taksi-takken.'
         ]
       ],
       ['demooistetak',
