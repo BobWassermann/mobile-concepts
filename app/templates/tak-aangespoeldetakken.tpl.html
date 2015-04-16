@@ -1,3 +1,25 @@
 <div class="tekstballon tak" ng-click="click()" ng-show="!clickDone">
   <span>{{messages[1][1][clicked]}}</span>
 </div>
+
+<div class="keuze image full animated bounceInRight" ng-show="clickDone && !opdrachtDone">
+  <h3>Leg je vinger op de afbeelding en ontdek meer over de soorten aangespoelde takken.'</h3>
+    <ul>
+      <li ng-click="check()"
+          on-long-press="info()"
+          ng-class="class"
+          ng-repeat="i in aangespoeldetakken"
+          style="background-image: url(/images/opdrachten/tak/aangespoeldetakken/{{i.name}}.jpg)">
+        <span>
+          <h1>{{i.name | capitalize}}</h1>
+          <p>{{i.fact}}</p>
+        </span>
+      </li>
+    </ul>
+    <button ng-show="checkDone" ng-click="opdrachtDone = true">Verder</button>
+    <p class="hulp" ng-hide="checkDone">Tip: Houd je vinger lang ingedrukt op een plaatje voor een leuk weetje</p>
+</div>
+
+<div class="tekstballon tak" ng-show="opdrachtDone" ui-sref="home">
+  <span>Zo zie je maar weer. Iedere tak heeft zo zijn eigen verhaal.</span>
+</div>

@@ -19,9 +19,9 @@ angular.module('mobileConceptsApp')
       ],
       ['aangespoeldetakken',
         [
-          'Ga op zoek naar takken. Dik of juist dun, lang of kort, alles mag.  ',
-          'Waar denk je dat de tak vandaan komt, en waarom?',
-          'Klik op de afbeeldingen hierboven en ontdek meer over de aangespoelde takken.'
+          'Takken kunnen tientalle kilometers afleggen voordat ze ergens aanstranden.  ',
+          'Waarom een tak in de Maas ligt kun je meestal afleiden aan het uiterlijk van de tak.',
+          'De Maas heeft ook effect op de buitenkant van de tak.'
         ]
       ],
       ['detaksi',
@@ -72,4 +72,25 @@ angular.module('mobileConceptsApp')
         fact: 'Bij het trillen van de bodem kruipen de regenwormen uit de grond, dit kan door de loopbewegingen van dieren worden veroorzaakt of door menselijk handelen zoals met behulp van een stok of greep.'
       }
     ];
+
+    $scope.aangespoeldetakken = [
+      {
+        name: 'glad',
+        fact: 'Zoals je ziet zijn de takken in de afbeelding behoorlijk glad. Dit komt onder andere door het schuren over de bodem van de Maas.'
+      },
+      {
+        name: 'aangeknaagd',
+        fact: 'Bij sommige takken zie je, zoals bij de afbeelding hierboven, knaagsporen. Dit wilt dus zeggen dat ergens stroomopwaards bevers aan het werk zijn geweest.'
+      },
+    ];
+
+    $scope.demooistetak = [
+      {
+        name: 'ja',
+      },
+      {
+        name: 'nee',
+      },
+    ];
+
   });
