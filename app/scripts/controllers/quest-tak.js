@@ -86,10 +86,10 @@ angular.module('mobileConceptsApp')
 
     $scope.demooistetak = [
       {
-        name: 'ja',
+        option: 'Ja, natuurlijk!',
       },
       {
-        name: 'nee',
+        option: 'Nee, deze keer niet',
       },
     ];
 

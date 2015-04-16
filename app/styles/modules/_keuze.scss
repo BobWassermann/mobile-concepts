@@ -134,7 +134,7 @@ $keuze--check-size: 30px;
         margin: 1rem auto;
       }
     }
-    p {
+    p.label {
       @include animation(slide-in 1s);
       position: absolute;
       left: 0;
