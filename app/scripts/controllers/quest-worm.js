@@ -48,15 +48,11 @@ angular.module('mobileConceptsApp')
 
     $scope.grondgraven = [
       {
-        option: 'optie 1',
-        value: 'false'
-      },
-      {
-        option: 'optie 2',
+        option: 'Onder de grond',
         value: 'true'
       },
       {
-        option: 'optie 3',
+        option: 'Boven de grond',
         value: 'false'
       }
     ];    

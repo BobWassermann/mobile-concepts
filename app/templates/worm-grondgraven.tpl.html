@@ -1,5 +1,5 @@
 <div class="keuze image full animated bounceInRight" ng-show="clickDone && !opdrachtDone">
-  <h3>Opties</h3>
+  <h3>Waar is de grond het vochtigst?</h3>
     <form class="radio">
       <label ng-repeat="i in grondgraven">
         <input type="radio" name="grondgraven" ng-model="grondgraven.value" value="{{i.value}}">
@@ -10,9 +10,8 @@
 </div>
 
 <div class="keuze image full animated bounceInRight" ng-show="optie">
-  <h3>Hier zien jullie enkele takken</h3>
-    <p ng-show="grondgraven.value === 'true'">juist!</p>
-    <p ng-show="grondgraven.value === 'false'">helaas!</p>
+  <h3 ng-show="grondgraven.value === 'true'">Super! Dat was het juiste antwoord</h3>
+  <h3 ng-show="grondgraven.value === 'false'">Helaas! Dat was fout, probeer het nog een keer</h3>
     
     <button ng-show="grondgraven.value === 'false'" ng-click="optie = false">← Terug</button>
     <button ng-show="grondgraven.value === 'true'" ng-click="opdrachtAf()">Verder</button>
