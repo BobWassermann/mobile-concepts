@@ -3,10 +3,9 @@
 </div>
 
 <div class="keuze image full animated bounceInRight" ng-show="clickDone && !opdrachtDone">
-  <h3>Leg je vinger op de afbeelding en ontdek meer over de soorten aangespoelde takken.'</h3>
+  <h3>Tik op de afbeelding en ontdek meer over de soorten aangespoelde takken.</h3>
     <ul>
-      <li ng-click="check()"
-          on-long-press="info()"
+      <li ng-click="info()"
           ng-class="class"
           ng-repeat="i in aangespoeldetakken"
           style="background-image: url(/images/opdrachten/tak/aangespoeldetakken/{{i.name}}.jpg)">
@@ -16,8 +15,7 @@
         </span>
       </li>
     </ul>
-    <button ng-show="checkDone" ng-click="opdrachtDone = true">Verder</button>
-    <p class="hulp" ng-hide="checkDone">Tip: Houd je vinger lang ingedrukt op een plaatje voor een leuk weetje</p>
+    <button ng-click="opdrachtDone = true">Verder</button>
 </div>
 
 <div class="tekstballon tak" ng-show="opdrachtDone" ng-click="opdrachtAf()">

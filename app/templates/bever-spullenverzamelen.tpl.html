@@ -22,9 +22,9 @@
           ng-class="class"
           ng-repeat="i in spullenverzamelenTakken"
           style="background-image: url(/images/opdrachten/bever/spullenverzamelen/takken/{{i.name}}.jpg)">
-          <p>{{i.name | capitalize}}</p>
+          <p class="label">{{i.name | capitalize}}</p>
       </li>
     </ul>
-    <button ng-show="checkDone" ng-click="opdrachtDone = true">Verder</button>
+    <button ng-show="checkDone" ng-click="opdrachtAf()">Verder</button>
     <p class="hulp" ng-hide="checkDone">Tik op de takken die jullie gevonden hebben. Haal de wilgentak ertussenuit.</p>
 </div>

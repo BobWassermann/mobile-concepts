@@ -9,11 +9,10 @@
           ng-class="class"
           ng-repeat="i in degrotespeurtocht"
           style="background-image: url(/images/opdrachten/bever/degrotespeurtocht/{{i.name}}.jpg)">
-        <p>{{i.name | capitalize}}</p>
+        <p class="label">{{i.name | capitalize}}</p>
       </li>
     </ul>
     <button ng-show="checkDone" ng-click="opdrachtDone = true">Verder</button>
-    <p class="hulp" ng-hide="checkDone">Tip: Houd je vinger lang ingedrukt op een plaatje voor een leuk weetje</p>
 </div>
 
 <div class="tekstballon bever" ng-show="opdrachtDone" ng-click="opdrachtAf()">

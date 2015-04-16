@@ -9,7 +9,7 @@
           ng-class="class"
           ng-repeat="i in poepinspecteren"
           style="background-image: url(/images/opdrachten/bloem/poepinspecteren/{{i.name}}.jpg)">
-        <p>{{i.name | capitalize}}</p>
+        <p class="label">{{i.name | capitalize}}</p>
       </li>
     </ul>
     <button ng-click="opdrachtDone = true">Verder</button>

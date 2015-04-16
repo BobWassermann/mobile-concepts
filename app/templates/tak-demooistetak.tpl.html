@@ -3,20 +3,14 @@
 </div>
 
 <div class="keuze image full animated bounceInRight" ng-show="clickDone && !opdrachtDone">
-  <h3>Kun jij taksi-takken vinden? Zo ja, welke insecten zitten er op de taksi?'</h3>
-    <ul>
-      <li ng-click="check()"
-          on-long-press="info()"
-          ng-class="class"
-          ng-repeat="i in demooistetak"
-          style="background-image: url(/images/opdrachten/tak/detaksi/{{i.name}}.jpg)">
-        <span>
-          <h1>{{i.name | capitalize}}</h1>
-          <p>{{i.fact}}</p>
-        </span>
-      </li>
-    </ul>
-    <button ng-show="checkDone" ng-click="opdrachtDone = true">Verder</button>
+   <h3>Wat doe je? Neem je de tak mee of laat je hem liggen?</h3>
+    <form class="radio">
+      <label ng-repeat="i in demooistetak">
+        <input type="radio" name="takmeenemen" ng-model="takmeenemen.value">
+          {{i.option}}
+      </label>
+    </form>
+    <button ng-click="opdrachtDone = true">Verder</button>
 </div>
 
 <div class="tekstballon tak" ng-show="opdrachtDone" ng-click="opdrachtAf()">
