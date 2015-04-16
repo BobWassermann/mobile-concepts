@@ -65,11 +65,17 @@ app.config(function ($stateProvider, $urlRouterProvider, $provide) {
         })
         .state('worm.stenenspeurtocht', {
           url: '/worm/stenenspeurtocht',
-          templateUrl: '/templates/worm-stenenspeurtocht.tpl.html'
+          templateUrl: '/templates/worm-stenenspeurtocht.tpl.html',
+          data: {
+            stateNumber: 2
+          }
         })
         .state('worm.grondgraven', {
           url: '/worm/grondgraven',
-          templateUrl: '/templates/worm-grondgraven.tpl.html'
+          templateUrl: '/templates/worm-grondgraven.tpl.html',
+          data: {
+            stateNumber: 1
+          }
         })
 
 
