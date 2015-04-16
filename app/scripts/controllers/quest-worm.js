@@ -30,20 +30,12 @@ angular.module('mobileConceptsApp')
           'Ze hebben allemaal andere kleuren en formaten.',
           'Willen jullie eens zoeken hoe veel verschillende stenen jullie kunnen vinden?'
         ]
-      ],
-      ['spullenverzamelen',
-        [
-          'Ik wil een huisje bouwen maar dat is veel werk en ik heb er vanalles voor nodig.',
-          'Willen jullie mij helpen met het verzamelen van deze spullen?',
-          'Je hebt wel een loep nodig!'
-        ]
       ]
     ];
     
     $scope.opdrachten = [
       'Grond Graven',
-      'Stenenspeurtocht',
-      'Spullen verzamelen'
+      'Stenenspeurtocht'
     ];
 
     $scope.grondgraven = [

@@ -34,6 +34,12 @@
     <div class="container">
     <a ng-click="goHome()"><div class="nav home"></div></a>
       <div ui-view=""></div>
+      <div class="gehaald" ng-show="opdrachtenDone.length === 11">
+        <hgroup>
+          <h1>Wow! Super! Je hebt de zoektocht voltooid.</h1>
+          <p>Lever je tablet in bij je toezichthouder</p>
+        </hgroup>
+      </div>
     </div>
 
 
