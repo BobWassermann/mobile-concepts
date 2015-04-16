@@ -62,6 +62,10 @@ $keuze--check-size: 30px;
       color: $orange;
       border-radius: $border-radius--g;
       cursor: pointer;
+      &.active {
+        @include transition(0.2s);
+        background: green;
+      }
       @include mobile {
         padding: 0.5em 0;
       }

@@ -2,7 +2,11 @@
   <div class="keuze animated rubberBand">
     <h3>Met welke klusjes willen jullie helpen?</h3>
       <ul>
-        <li ng-repeat="i in opdrachten" ng-click="resetAndGo('bever.{{i | removeSpacesThenLowercase}}')">{{i}}</li>
+        <li ng-repeat="i in opdrachten"
+            ng-class="{'active':opdrachtenDone.indexOf(i) == -1}"
+            ng-click="resetAndGo('bever.{{i | removeSpacesThenLowercase}}')">
+            {{i}}
+        </li>
       </ul>
   </div>
 </div>
