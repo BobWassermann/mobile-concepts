@@ -25,7 +25,7 @@ $wolkCount: 6;
   @for $i from 1 through $wolkCount {
   
     .wolk:nth-child(#{$i}) {
-      background: center/contain url(/images/wolk.svg) no-repeat;
+      background: center/contain url(./images/wolk.svg) no-repeat;
       position: absolute;
       top: calc(1vh * #{random(6)});
       @include size($wolkSmall);
